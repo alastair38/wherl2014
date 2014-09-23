@@ -103,6 +103,15 @@ XXLARGE
     color: #666;
 }
 
+.home-links {
+    height: 200px;
+    padding: 1em;
+    background: tomato;
+    margin-bottom: 2em;
+    & h3 {
+        text-align: center;
+    }
+}
 
 /*
 RETINA (2x RESOLUTION DEVICES)
