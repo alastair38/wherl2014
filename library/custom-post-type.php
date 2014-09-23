@@ -14,26 +14,26 @@ in their own file.
 
 
 // let's create the function for the custom type
-function clg_staff() {
+function clg_people() {
 	// creating (registering) the custom type
-	register_post_type( 'staff', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
+	register_post_type( 'people', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
 	 	// let's now add all the options for this post type
 		array('labels' => array(
-			'name' => __('Staff', 'jointstheme'), /* This is the Title of the Group */
-			'singular_name' => __('Staff', 'jointstheme'), /* This is the individual type */
-			'all_items' => __('All Staff', 'jointstheme'), /* the all items menu item */
-			'add_new' => __('Add New Staff', 'jointstheme'), /* The add new menu item */
-			'add_new_item' => __('Add New Staff', 'jointstheme'), /* Add New Display Title */
+			'name' => __('People', 'jointstheme'), /* This is the Title of the Group */
+			'singular_name' => __('Person', 'jointstheme'), /* This is the individual type */
+			'all_items' => __('All People', 'jointstheme'), /* the all items menu item */
+			'add_new' => __('Add New Person', 'jointstheme'), /* The add new menu item */
+			'add_new_item' => __('Add New Person', 'jointstheme'), /* Add New Display Title */
 			'edit' => __( 'Edit', 'jointstheme' ), /* Edit Dialog */
-			'edit_item' => __('Edit Staff', 'jointstheme'), /* Edit Display Title */
-			'new_item' => __('New Staff', 'jointstheme'), /* New Display Title */
-			'view_item' => __('View Staff', 'jointstheme'), /* View Display Title */
-			'search_items' => __('Search Staff', 'jointstheme'), /* Search Custom Type Title */
+			'edit_item' => __('Edit People', 'jointstheme'), /* Edit Display Title */
+			'new_item' => __('New Person', 'jointstheme'), /* New Display Title */
+			'view_item' => __('View People', 'jointstheme'), /* View Display Title */
+			'search_items' => __('Search People', 'jointstheme'), /* Search Custom Type Title */
 			'not_found' =>  __('Nothing found in the Database.', 'jointstheme'), /* This displays if there are no entries yet */
 			'not_found_in_trash' => __('Nothing found in Trash', 'jointstheme'), /* This displays if there is nothing in the trash */
 			'parent_item_colon' => ''
 			), /* end of arrays */
-			'description' => __( 'Collegiate.ly Staff', 'jointstheme' ), /* Custom Type Description */
+			'description' => __( 'Wherl People', 'jointstheme' ), /* Custom Type Description */
 			'public' => true,
 			'publicly_queryable' => true,
 			'exclude_from_search' => false,
@@ -41,7 +41,7 @@ function clg_staff() {
 			'query_var' => true,
 			'menu_position' => 6, /* this is what order you want it to appear in on the left hand side menu */
 			'menu_icon' => 'dashicons-id-alt', /* the icon for the custom post type menu */
-			'rewrite'	=> array( 'slug' => 'staff', 'with_front' => false ), /* you can specify its url slug */
+			'rewrite'	=> array( 'slug' => 'people', 'with_front' => false ), /* you can specify its url slug */
 			'has_archive' => true, /* you can rename the slug here */
 			'capability_type' => 'post',
 			'hierarchical' => false,
@@ -53,135 +53,8 @@ function clg_staff() {
 }
 
 	// adding the function to the Wordpress init
-	add_action( 'init', 'clg_staff');
+	add_action( 'init', 'clg_people');
 
-// let's create the function for the custom type
-function clg_staff_info() {
-	// creating (registering) the custom type
-	register_post_type( 'staff_info', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
-	 	// let's now add all the options for this post type
-		array('labels' => array(
-			'name' => __('Staff Info', 'jointstheme'), /* This is the Title of the Group */
-			'singular_name' => __('Staff Info', 'jointstheme'), /* This is the individual type */
-			'all_items' => __('Add Staff Info', 'jointstheme'), /* the all items menu item */
-			'add_new' => __('Add New', 'jointstheme'), /* The add new menu item */
-			'add_new_item' => __('Add New Staff Info', 'jointstheme'), /* Add New Display Title */
-			'edit' => __( 'Edit', 'jointstheme' ), /* Edit Dialog */
-			'edit_item' => __('Edit Staff Info', 'jointstheme'), /* Edit Display Title */
-			'new_item' => __('New Staff Info', 'jointstheme'), /* New Display Title */
-			'view_item' => __('View Staff Info', 'jointstheme'), /* View Display Title */
-			'search_items' => __('Search Staff Info', 'jointstheme'), /* Search Custom Type Title */
-			'not_found' =>  __('Nothing found in the Database.', 'jointstheme'), /* This displays if there are no entries yet */
-			'not_found_in_trash' => __('Nothing found in Trash', 'jointstheme'), /* This displays if there is nothing in the trash */
-			'parent_item_colon' => ''
-			), /* end of arrays */
-			'description' => __( 'Collegiate.ly Staff Info', 'jointstheme' ), /* Custom Type Description */
-			'public' => true,
-			'publicly_queryable' => true,
-			'exclude_from_search' => false,
-			'show_ui' => true,
-			'query_var' => true,
-			'menu_position' => 6, /* this is what order you want it to appear in on the left hand side menu */
-			'menu_icon' => 'dashicons-id-alt', /* the icon for the custom post type menu */
-			'rewrite'	=> array( 'slug' => 'staff_info', 'with_front' => false ), /* you can specify its url slug */
-			'has_archive' => true, /* you can rename the slug here */
-            'show_in_menu' => 'edit.php?post_type=staff',
-			'capability_type' => 'page',
-			'hierarchical' => true,
-			/* the next one is important, it tells what's enabled in the post editor */
-			'supports' => array( 'title', 'editor', 'page-attributes', 'thumbnail')
-	 	) /* end of options */
-	); /* end of register post type */
-
-}
-
-	// adding the function to the Wordpress init
-	add_action( 'init', 'clg_staff_info');
-	
-	// let's create the function for the custom type
-function clg_courses() {
-	// creating (registering) the custom type
-	register_post_type( 'courses', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
-	 	// let's now add all the options for this post type
-		array('labels' => array(
-			'name' => __('Courses', 'jointstheme'), /* This is the Title of the Group */
-			'singular_name' => __('Course', 'jointstheme'), /* This is the individual type */
-			'all_items' => __('All Courses', 'jointstheme'), /* the all items menu item */
-			'add_new' => __('Add New', 'jointstheme'), /* The add new menu item */
-			'add_new_item' => __('Add New Course', 'jointstheme'), /* Add New Display Title */
-			'edit' => __( 'Edit', 'jointstheme' ), /* Edit Dialog */
-			'edit_item' => __('Edit Courses', 'jointstheme'), /* Edit Display Title */
-			'new_item' => __('New Course', 'jointstheme'), /* New Display Title */
-			'view_item' => __('View Courses', 'jointstheme'), /* View Display Title */
-			'search_items' => __('Search Courses', 'jointstheme'), /* Search Custom Type Title */
-			'not_found' =>  __('Nothing found in the Database.', 'jointstheme'), /* This displays if there are no entries yet */
-			'not_found_in_trash' => __('Nothing found in Trash', 'jointstheme'), /* This displays if there is nothing in the trash */
-			'parent_item_colon' => ''
-			), /* end of arrays */
-			'description' => __( 'Collegiate.ly Courses', 'jointstheme' ), /* Custom Type Description */
-			'public' => true,
-			'publicly_queryable' => true,
-			'exclude_from_search' => false,
-			'show_ui' => true,
-			'query_var' => true,
-			'menu_position' => 7, /* this is what order you want it to appear in on the left hand side menu */
-			'menu_icon' => 'dashicons-welcome-learn-more', /* the icon for the custom post type menu */
-			'rewrite'	=> array( 'slug' => 'courses', 'with_front' => false ), /* you can specify its url slug */
-			'has_archive' => true, /* you can rename the slug here */
-			'capability_type' => 'post',
-			'hierarchical' => false,
-			/* the next one is important, it tells what's enabled in the post editor */
-			'supports' => array( 'title', 'editor', 'author', 'thumbnail')
-	 	) /* end of options */
-	); /* end of register post type */
-
-}
-
-	// adding the function to the Wordpress init
-	add_action( 'init', 'clg_courses');
-
-// let's create the function for the custom type
-function clg_courses_info() {
-	// creating (registering) the custom type
-	register_post_type( 'courses_info', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
-	 	// let's now add all the options for this post type
-		array('labels' => array(
-			'name' => __('Courses Info', 'jointstheme'), /* This is the Title of the Group */
-			'singular_name' => __('Courses Info', 'jointstheme'), /* This is the individual type */
-			'all_items' => __('Add Courses Info', 'jointstheme'), /* the all items menu item */
-			'add_new' => __('Add New', 'jointstheme'), /* The add new menu item */
-			'add_new_item' => __('Add New Courses Info', 'jointstheme'), /* Add New Display Title */
-			'edit' => __( 'Edit', 'jointstheme' ), /* Edit Dialog */
-			'edit_item' => __('Edit Courses Info', 'jointstheme'), /* Edit Display Title */
-			'new_item' => __('New Courses Info', 'jointstheme'), /* New Display Title */
-			'view_item' => __('View Courses Info', 'jointstheme'), /* View Display Title */
-			'search_items' => __('Search Courses Info', 'jointstheme'), /* Search Custom Type Title */
-			'not_found' =>  __('Nothing found in the Database.', 'jointstheme'), /* This displays if there are no entries yet */
-			'not_found_in_trash' => __('Nothing found in Trash', 'jointstheme'), /* This displays if there is nothing in the trash */
-			'parent_item_colon' => ''
-			), /* end of arrays */
-			'description' => __( 'Collegiate.ly Courses Info', 'jointstheme' ), /* Custom Type Description */
-			'public' => true,
-			'publicly_queryable' => true,
-			'exclude_from_search' => false,
-			'show_ui' => true,
-			'query_var' => true,
-			'menu_position' => 6, /* this is what order you want it to appear in on the left hand side menu */
-			'menu_icon' => 'dashicons-id-alt', /* the icon for the custom post type menu */
-			'rewrite'	=> array( 'slug' => 'courses_info', 'with_front' => false ), /* you can specify its url slug */
-			'has_archive' => true, /* you can rename the slug here */
-            'show_in_menu' => 'edit.php?post_type=courses',
-			'capability_type' => 'page',
-			'hierarchical' => true,
-			/* the next one is important, it tells what's enabled in the post editor */
-			'supports' => array( 'title', 'editor', 'page-attributes', 'thumbnail')
-	 	) /* end of options */
-	); /* end of register post type */
-
-}
-
-	// adding the function to the Wordpress init
-	add_action( 'init', 'clg_courses_info');
 
 		// let's create the function for the custom type
 function clg_events() {
@@ -203,13 +76,13 @@ function clg_events() {
 			'not_found_in_trash' => __('Nothing found in Trash', 'jointstheme'), /* This displays if there is nothing in the trash */
 			'parent_item_colon' => ''
 			), /* end of arrays */
-			'description' => __( 'Collegiate.ly Events', 'jointstheme' ), /* Custom Type Description */
+			'description' => __( 'Wherl Events', 'jointstheme' ), /* Custom Type Description */
 			'public' => true,
 			'publicly_queryable' => true,
 			'exclude_from_search' => false,
 			'show_ui' => true,
 			'query_var' => true,
-			'menu_position' => 8, /* this is what order you want it to appear in on the left hand side menu */
+			'menu_position' => 7, /* this is what order you want it to appear in on the left hand side menu */
 			'menu_icon' => 'dashicons-megaphone', /* the icon for the custom post type menu */
 			'rewrite'	=> array( 'slug' => 'events', 'with_front' => false ), /* you can specify its url slug */
 			'has_archive' => true, /* you can rename the slug here */
@@ -246,13 +119,13 @@ function clg_resources() {
 			'not_found_in_trash' => __('Nothing found in Trash', 'jointstheme'), /* This displays if there is nothing in the trash */
 			'parent_item_colon' => ''
 			), /* end of arrays */
-			'description' => __( 'Collegiate.ly Resources', 'jointstheme' ), /* Custom Type Description */
+			'description' => __( 'Wherl Resources', 'jointstheme' ), /* Custom Type Description */
 			'public' => true,
 			'publicly_queryable' => true,
 			'exclude_from_search' => false,
 			'show_ui' => true,
 			'query_var' => true,
-			'menu_position' => 9, /* this is what order you want it to appear in on the left hand side menu */
+			'menu_position' => 8, /* this is what order you want it to appear in on the left hand side menu */
 			'menu_icon' => 'dashicons-clipboard', /* the icon for the custom post type menu */
 			'rewrite'	=> array( 'slug' => 'resources', 'with_front' => false ), /* you can specify its url slug */
 			'has_archive' => true, /* you can rename the slug here */
@@ -305,26 +178,26 @@ function clg_resources_cats(){
 	add_action( 'init', 'clg_resources_cats', 0 );
 
 		// let's create the function for the custom type
-function clg_departments() {
+function clg_partners() {
 	// creating (registering) the custom type
-	register_post_type( 'departments', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
+	register_post_type( 'partners', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
 	 	// let's now add all the options for this post type
 		array('labels' => array(
-			'name' => __('Departments', 'jointstheme'), /* This is the Title of the Group */
-			'singular_name' => __('Department', 'jointstheme'), /* This is the individual type */
-			'all_items' => __('All Departments', 'jointstheme'), /* the all items menu item */
+			'name' => __('Partners', 'jointstheme'), /* This is the Title of the Group */
+			'singular_name' => __('Partner', 'jointstheme'), /* This is the individual type */
+			'all_items' => __('All Partners', 'jointstheme'), /* the all items menu item */
 			'add_new' => __('Add New', 'jointstheme'), /* The add new menu item */
-			'add_new_item' => __('Add New Department', 'jointstheme'), /* Add New Display Title */
+			'add_new_item' => __('Add New Partner', 'jointstheme'), /* Add New Display Title */
 			'edit' => __( 'Edit', 'jointstheme' ), /* Edit Dialog */
-			'edit_item' => __('Edit Departments', 'jointstheme'), /* Edit Display Title */
-			'new_item' => __('New Department', 'jointstheme'), /* New Display Title */
-			'view_item' => __('View Departments', 'jointstheme'), /* View Display Title */
-			'search_items' => __('Search Departments', 'jointstheme'), /* Search Custom Type Title */
+			'edit_item' => __('Edit Partners', 'jointstheme'), /* Edit Display Title */
+			'new_item' => __('New Partner', 'jointstheme'), /* New Display Title */
+			'view_item' => __('View Partners', 'jointstheme'), /* View Display Title */
+			'search_items' => __('Search Partners', 'jointstheme'), /* Search Custom Type Title */
 			'not_found' =>  __('Nothing found in the Database.', 'jointstheme'), /* This displays if there are no entries yet */
 			'not_found_in_trash' => __('Nothing found in Trash', 'jointstheme'), /* This displays if there is nothing in the trash */
 			'parent_item_colon' => ''
 			), /* end of arrays */
-			'description' => __( 'Collegiate.ly Departments', 'jointstheme' ), /* Custom Type Description */
+			'description' => __( 'Wherl Partners', 'jointstheme' ), /* Custom Type Description */
 			'public' => true,
 			'publicly_queryable' => true,
 			'exclude_from_search' => false,
@@ -332,7 +205,7 @@ function clg_departments() {
 			'query_var' => true,
 			'menu_position' => 9, /* this is what order you want it to appear in on the left hand side menu */
 			'menu_icon' => 'dashicons-networking', /* the icon for the custom post type menu */
-			'rewrite'	=> array( 'slug' => 'departments', 'with_front' => false ), /* you can specify its url slug */
+			'rewrite'	=> array( 'slug' => 'partners', 'with_front' => false ), /* you can specify its url slug */
 			'has_archive' => true, /* you can rename the slug here */
 			'capability_type' => 'page',
 			'hierarchical' => true,
@@ -344,192 +217,15 @@ function clg_departments() {
 }
 
 	// adding the function to the Wordpress init
-	add_action( 'init', 'clg_departments');
-
-// let's create the function for the custom type
-function clg_departments_info() {
-	// creating (registering) the custom type
-	register_post_type( 'departments_info', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
-	 	// let's now add all the options for this post type
-		array('labels' => array(
-			'name' => __('Departments Info', 'jointstheme'), /* This is the Title of the Group */
-			'singular_name' => __('Dept Info', 'jointstheme'), /* This is the individual type */
-			'all_items' => __('Add Dept Info', 'jointstheme'), /* the all items menu item */
-			'add_new' => __('Add New', 'jointstheme'), /* The add new menu item */
-			'add_new_item' => __('Add New Dept Info', 'jointstheme'), /* Add New Display Title */
-			'edit' => __( 'Edit', 'jointstheme' ), /* Edit Dialog */
-			'edit_item' => __('Edit Dept Info', 'jointstheme'), /* Edit Display Title */
-			'new_item' => __('New Dept Info', 'jointstheme'), /* New Display Title */
-			'view_item' => __('View Dept Info', 'jointstheme'), /* View Display Title */
-			'search_items' => __('Search Dept Info', 'jointstheme'), /* Search Custom Type Title */
-			'not_found' =>  __('Nothing found in the Database.', 'jointstheme'), /* This displays if there are no entries yet */
-			'not_found_in_trash' => __('Nothing found in Trash', 'jointstheme'), /* This displays if there is nothing in the trash */
-			'parent_item_colon' => ''
-			), /* end of arrays */
-			'description' => __( 'Collegiate.ly Departments Info', 'jointstheme' ), /* Custom Type Description */
-			'public' => true,
-			'publicly_queryable' => true,
-			'exclude_from_search' => false,
-			'show_ui' => true,
-			'query_var' => true,
-			'menu_position' => 6, /* this is what order you want it to appear in on the left hand side menu */
-			'menu_icon' => 'dashicons-id-alt', /* the icon for the custom post type menu */
-			'rewrite'	=> array( 'slug' => 'departments_info', 'with_front' => false ), /* you can specify its url slug */
-			'has_archive' => true, /* you can rename the slug here */
-            'show_in_menu' => 'edit.php?post_type=departments',
-			'capability_type' => 'page',
-			'hierarchical' => true,
-			/* the next one is important, it tells what's enabled in the post editor */
-			'supports' => array( 'title', 'editor', 'page-attributes', 'thumbnail')
-	 	) /* end of options */
-	); /* end of register post type */
-
-}
-
-	// adding the function to the Wordpress init
-	add_action( 'init', 'clg_departments_info');
+	add_action( 'init', 'clg_partners');
 
 
 /* Adding custom fields for CPTs. These can be added to with the custom fields menu link in the admin area */
 
 if(function_exists("register_field_group"))
 {
-	register_field_group(array (
-		'id' => 'acf_connected-department',
-		'title' => 'Connected Department',
-		'fields' => array (
-			array (
-				'key' => 'field_5379da57c71a2',
-				'label' => 'Department',
-				'name' => 'department',
-				'type' => 'relationship',
-				'return_format' => 'object',
-				'post_type' => array (
-					0 => 'departments',
-				),
-				'taxonomy' => array (
-					0 => 'all',
-				),
-				'filters' => array (
-					0 => 'search',
-				),
-				'result_elements' => array (
-					0 => 'post_type',
-					1 => 'post_title',
-				),
-				'max' => '',
-			),
-		),
-		'location' => array (
-			array (
-				array (
-					'param' => 'post_type',
-					'operator' => '==',
-					'value' => 'courses',
-					'order_no' => 0,
-					'group_no' => 0,
-				),
-			),
-			array (
-				array (
-					'param' => 'post_type',
-					'operator' => '==',
-					'value' => 'events',
-					'order_no' => 0,
-					'group_no' => 1,
-				),
-			),
-			array (
-				array (
-					'param' => 'post_type',
-					'operator' => '==',
-					'value' => 'resources',
-					'order_no' => 0,
-					'group_no' => 2,
-				),  
-			),
-            array (
-				array (
-					'param' => 'post_type',
-					'operator' => '==',
-					'value' => 'staff',
-					'order_no' => 0,
-					'group_no' => 3,
-				),  
-			),
-		),
-		'options' => array (
-			'position' => 'acf_after_title',
-			'layout' => 'default',
-			'hide_on_screen' => array (
-			),
-		),
-		'menu_order' => 0,
-	));
-	register_field_group(array (
-		'id' => 'acf_connected-staff',
-		'title' => 'Connected Staff',
-		'fields' => array (
-			array (
-				'key' => 'field_5379d9b708284',
-				'label' => 'Staff Member(s)',
-				'name' => 'staff_member',
-				'type' => 'relationship',
-				'return_format' => 'object',
-				'post_type' => array (
-					0 => 'staff',
-				),
-				'taxonomy' => array (
-					0 => 'all',
-				),
-				'filters' => array (
-					0 => 'search',
-				),
-				'result_elements' => array (
-					0 => 'post_type',
-					1 => 'post_title',
-				),
-				'max' => '',
-			),
-		),
-		'location' => array (
-			array (
-				array (
-					'param' => 'post_type',
-					'operator' => '==',
-					'value' => 'courses',
-					'order_no' => 0,
-					'group_no' => 0,
-				),
-			),
-			array (
-				array (
-					'param' => 'post_type',
-					'operator' => '==',
-					'value' => 'events',
-					'order_no' => 0,
-					'group_no' => 1,
-				),
-			),
-			array (
-				array (
-					'param' => 'post_type',
-					'operator' => '==',
-					'value' => 'resources',
-					'order_no' => 0,
-					'group_no' => 2,
-				),
-			),
-			
-		),
-		'options' => array (
-			'position' => 'acf_after_title',
-			'layout' => 'default',
-			'hide_on_screen' => array (
-			),
-		),
-		'menu_order' => 0,
-	));
+	
+	
 	register_field_group(array (
 		'id' => 'acf_contact-details',
 		'title' => 'Contact Details',
@@ -545,7 +241,7 @@ if(function_exists("register_field_group"))
 				'label' => 'Contact Name',
 				'name' => 'contact_name',
 				'type' => 'text',
-				'instructions' => 'Enter the name of any contact (particularly useful for events or courses)',
+				'instructions' => 'Enter the name of any individual contact',
 				'default_value' => '',
 				'placeholder' => '',
 				'prepend' => '',
@@ -650,7 +346,7 @@ if(function_exists("register_field_group"))
 				array (
 					'param' => 'post_type',
 					'operator' => '==',
-					'value' => 'departments',
+					'value' => 'partners',
 					'order_no' => 0,
 					'group_no' => 0,
 				),
@@ -668,7 +364,7 @@ if(function_exists("register_field_group"))
 				array (
 					'param' => 'post_type',
 					'operator' => '==',
-					'value' => 'staff',
+					'value' => 'people',
 					'order_no' => 0,
 					'group_no' => 2,
 				),  
@@ -744,8 +440,8 @@ if(function_exists("register_field_group"))
 		'menu_order' => 0,
 	));
 	register_field_group(array (
-		'id' => 'acf_staff-details',
-		'title' => 'Staff Details',
+		'id' => 'acf_people-details',
+		'title' => 'Person Details',
 		'fields' => array (
 			array (
 				'key' => 'field_537a1dbbe3aa7',
@@ -794,7 +490,7 @@ if(function_exists("register_field_group"))
 				array (
 					'param' => 'post_type',
 					'operator' => '==',
-					'value' => 'staff',
+					'value' => 'people',
 					'order_no' => 0,
 					'group_no' => 0,
 				),
