@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Home
+Template Name: Main Landing Pages
 */
 ?>
         
@@ -9,27 +9,20 @@ Template Name: Home
 			
 			<div id="content">
 			
-				<div id="home-inner-content" class="clearfix">
+				<div id="inner-content" class="clearfix">
 			
 				    <div id="main" class="large-12 medium-12 columns" role="main">
 
 					    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+					    
+					    <header class="article-header">
+		<h1 class="page-title"><?php the_title(); ?></h1>
+	</header> <!-- end article header -->
 					
 					  
+                    					<?php the_excerpt(); ?>
                     					
-<div class='slider'>
-     <div class='slide' >
-        <div class='slidecontent'>
-            <div class="caption"><p><img src="http://localhost/wherl/wp-content/uploads/2014/09/inline-Wherl-Logo.png"></p></div> 
-        </div>
-    </div>
-    <div class='slide'>
-        <div class='slidecontent'>
-             <div class="caption"><?php the_excerpt(); ?> </div> 
-        </div>
-    </div>
-</div>
-					    					
+                    								    								    					
 					    <?php endwhile; else : ?>
 					
 
@@ -46,11 +39,12 @@ Template Name: Home
 
 	foreach( $mypages as $page ) {		
 		$content = $page->post_content;
-
 		$content = apply_filters( 'the_content', $content );
+        $post_data = get_post($post->post_parent);
+        
 	?>
-		<div class="large-3 columns">
-		<div class="home-links <?php echo $page->post_name; ?>">
+		<div class="large-4 columns">
+		<div class="home-links <?php echo $post->post_name; ?>">
 		<h3><a href="<?php echo get_page_link( $page->ID ); ?>"><?php echo $page->post_title; ?></a></h3>
 		<?php echo $content; ?></div>
 		</div>

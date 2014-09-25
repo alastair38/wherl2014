@@ -83,36 +83,150 @@ XXLARGE
 
 } // end of media query
 
-#main {
-    background: url('http://placehold.it/1300x400/d5f1e5/ffffff');
+.home #main {
+    background: url('https://unsplash.imgix.net/37/rVvORijmSGFcCD1Qin5e_2014-02-23%2006.21.30%201.jpg?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=792b47a1e2bb456e9f114c5fe3bcdf4e');
     background-size: cover;
-    height: 350px;
+    height: 450px;
     margin-bottom: 6em;
-    margin-top: 0px;
+    margin-top: 0;
     position: relative;
 }
+
+.title a {
+    color: #666;
+}
+
+#inner-content {
+    padding: 3em;
+}
+    
+.home #container {
+    margin-top: 0;
+    padding: 0;
+}
+
+h1.title {
+    background: url('http://localhost/wherl/wp-content/uploads/2014/09/white-Wherl-Logo.png') no-repeat;
+    background-size: contain;
+    background-position: center center;
+    width: 200px;
+    text-indent: 100%;
+white-space: nowrap;
+overflow: hidden;
+    
+}
+
+p.source-org.copyright {
+    text-align: center;
+}
+
 
 .caption {
     position: absolute;
     top: 0%;
-    left: 0%;
-    width: 100%;
-    height: 100%;
-    padding: 2em;
+    left: 15%;
+    width: 70%;
+}
+
+.caption p {
+    padding: 1em;
     font-size: 2em;
     color: #666;
+    & img {
+        width: 60%;
+        margin-left: 20%;
+    }
 }
 
 .home-links {
     height: 200px;
     padding: 1em;
-    background: tomato;
+
     margin-bottom: 2em;
     & h3 {
         text-align: center;
     }
 }
 
+.project {
+        background: #c0e1fd;
+    }
+
+.people {
+        background: #666;
+    }
+
+.news {
+        background: #E38A8A;
+    }
+
+.findings {
+    background: #E6D43D;
+}
+
+
+/* SLIDER */
+
+ 
+.slider{
+	width: 100%;
+	height: 300px;
+	overflow: hidden;
+	position: relative;
+	
+}
+
+ 
+.slide{
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+}
+ 
+.slidecontent{
+	position: absolute;
+	
+	width:92%;
+	margin:5%;
+	padding: 15px 5px;
+	color: white;
+}
+ 
+.slidecontent a {
+color: #fff;
+text-transform: uppercase;
+text-decoration: underline;
+}
+ 
+#slideposition{
+	position: absolute;
+	bottom: 0px;
+}
+ 
+#slideposition ul{
+	list-style-type: none;
+	padding: 0;
+	margin: auto;
+}
+ 
+#slideposition ul li.indicator{
+	display: inline-block;
+	height: 10px;
+	width: 10px;
+	background: #666;
+	margin: 0px 7px;
+	padding: 0;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	overflow: hidden;
+	cursor: pointer;
+}
+ 
+#slideposition ul li.indicator.active{
+	background: lightblue;
+}
 /*
 RETINA (2x RESOLUTION DEVICES)
 This applies to the retina iPhone (4s) and iPad (2,3) along with

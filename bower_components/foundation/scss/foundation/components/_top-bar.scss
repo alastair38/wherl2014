@@ -15,7 +15,7 @@ $topbar-bg-color: #2f8888 !default;
 $topbar-bg: $topbar-bg-color !default;
 
 // Height and margin
-$topbar-height: 85px !default;
+$topbar-height: 55px !default;
 $topbar-margin-bottom: 0 !default;
 
 // Controlling the styles for the title in the top bar
@@ -40,7 +40,7 @@ $topbar-link-weight: normal !default;
 $topbar-link-font-size: rem-calc(13) !default;
 $topbar-link-hover-lightness: -10% !default; // Darken by 10%
 $topbar-link-bg: $topbar-bg !default;
-$topbar-link-bg-hover: rgba(255,255,255, 0.5) !default;
+$topbar-link-bg-hover: #fff !default;
 $topbar-link-bg-active: #fff !default;
 $topbar-link-bb-active: $success-color !default;
 $topbar-link-bg-active-hover: $topbar-link-bg-hover !default;
@@ -358,7 +358,7 @@ $topbar-arrows: true !default; //Set false to remove the triangle icon from the 
 
         // Apply the active link color when it has that class
         &.active > a {
-          border-bottom: 2px solid $topbar-link-bb-active;
+          border-bottom: 0px solid $topbar-link-bb-active;
           color: $topbar-link-color-active;
           &:hover {
                 background: $topbar-link-bg-active-hover;
@@ -629,7 +629,6 @@ $topbar-arrows: true !default; //Set false to remove the triangle icon from the 
 
           // Apply the active link color when it has that class
           &:active > a {
-            border-bottom: 2px solid $topbar-link-bb-active;
             color: $topbar-link-color-active;
           }
         }
