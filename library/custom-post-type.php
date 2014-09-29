@@ -46,7 +46,7 @@ function clg_people() {
 			'capability_type' => 'post',
 			'hierarchical' => false,
 			/* the next one is important, it tells what's enabled in the post editor */
-			'supports' => array( 'title', 'editor', 'author', 'thumbnail')
+			'supports' => array( 'title', 'author', 'thumbnail')
 	 	) /* end of options */
 	); /* end of register post type */
 

@@ -31,6 +31,7 @@ $postid = get_the_ID();
                         <div class="people-details">
                          <h3><?php echo get_the_title( $person->ID ); ?></h3>
                         <?php echo get_the_post_thumbnail( $person->ID ); ?>
+                        <p><?php echo the_field('biography', $person->ID); ?></p>
                             </div>
                        
                         </div>
