@@ -9274,6 +9274,19 @@ p.source-org.copyright {
   background: #666;
 }
 
+.people-details {
+  background: lightblue;
+  padding: 1em;
+  margin-bottom: 2em;
+}
+.people-details h3 {
+  font-size: 1em;
+}
+
+.people-title {
+  text-align: center;
+}
+
 .news {
   background: #E38A8A;
 }
