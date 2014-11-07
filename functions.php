@@ -40,7 +40,7 @@ library/admin.php
 	- adding custom login css
 	- changing text in footer of admin
 */
-// require_once('library/admin.php'); // this comes turned off by default
+require_once('library/admin.php'); // this comes turned off by default
 /*
 library/translation/translation.php
 	- adding support for other languages
@@ -318,4 +318,62 @@ else
    { return $html; }
 }
 add_filter( 'embed_oembed_html', 'add_video_wmode_transparent', 10, 3);
+
+add_filter( 'wp_nav_menu_items', 'add_logout_link', 10, 2);
+
+/* Gets edit link to current author's 'people' post_type content; which in this case is their profile. Call the function in the login link function to output this edit link to the navigation */
+
+function user_profile_link() {
+    $user_id = get_current_user_id();
+    $myitems = get_posts(array(
+        'post_type' => 'people',
+        'author' => $user_id
+        ));
+
+        if( $myitems ): 
+        foreach( $myitems as $myitem ):
+        $edit_link = get_edit_post_link($myitem->ID); 
+        endforeach; 
+        endif;
+        return $edit_link;
+    }
+/**
+ * Add a login link to the members navigation
+ */
+function add_logout_link( $items, $args )
+{
+    if($args->theme_location == 'main-nav')
+    {
+        if(is_user_logged_in())
+        {
+            $items .= '<li><a href="'. wp_logout_url() .'">Log Out</a></li>';
+             $items .= '<li><a href="'. user_profile_link() .'">Edit Profile</a></li>';
+        } else {
+            $items .= '<li><a href="'. wp_login_url() .'">Log In</a></li>';
+        }
+    }
+
+    return $items;
+}
+
+function wpb_change_title_text( $title ){
+     $screen = get_current_screen();
+ 
+     if  ( 'finding' == $screen->post_type ) {
+          $title = 'Enter findings title';
+     }
+    
+    if  ( 'events' == $screen->post_type ) {
+          $title = 'Enter event name';
+     }
+    
+    if  ( 'news' == $screen->post_type ) {
+          $title = 'Enter headline';
+     }
+ 
+     return $title;
+}
+ 
+add_filter( 'enter_title_here', 'wpb_change_title_text' );
+
 ?>

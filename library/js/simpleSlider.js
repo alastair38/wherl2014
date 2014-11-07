@@ -1,5 +1,5 @@
 /*
-    Version 2.3.4
+    Version 2.4.1
     The MIT License (MIT)
 
     Simple jQuery Slider is just what is says it is: a simple but powerfull jQuery slider.
@@ -30,6 +30,7 @@
             slideOnInterval: true,
             interval: 5000,
             swipe: true,
+			transition: "slide",
             animateDuration: 1000,
             animationEasing: 'ease',
             pauseOnHover: false,
@@ -43,25 +44,44 @@
             if(options.updateTransit && $.support.transition && jQuery().transition && !$.transit.useTransitionEnd){
                 $.transit.useTransitionEnd = true;
             }
-
+		
+			var cacheWidth = 0;
+		
             // Find the slides in the sliderdom and add the index attribute
             $(options.slidesContainer).find(options.slides).each(function(index){
                 // Give each slide a data-index so we can control it later on
                 $(this).attr('data-index', index);
+				cacheWidth = ($(this).outerWidth() > cacheWidth) ? $(this).outerWidth() : cacheWidth;
 
-                // A fixed width is needed for the IE left animation. Here we give each slide a width                
-                if ($.support.transition && jQuery().transition){
+				if(options.transition == "slide"){
+                    // A fixed width is needed for the IE left animation. Here we give each slide a width
+                     if($.support.transition !== undefined){
+                        $(this).css({
+                            x: index * 100 + '%',
+                            'z-index': index,
+                            width: cacheWidth
+                        });
+                     }
+                     else{
+                        $(this).css({
+                            left: index * 100 + '%',
+                            'z-index': index,
+                            width: cacheWidth
+                        });
+                     }
+                 }
+                 if(options.transition == "fade"){
+                    // A fixed width is needed for the IE left animation. Here we give each slide a width
+                    var alpha = (index == 0) ? 1 : 0;
                     $(this).css({
-                        x: index*100+'%',
-                        width: $(this).outerWidth()
+                        left: 0,
+                        top: 0,
+                        'z-index': index,
+                        width: cacheWidth,
+                        opacity: alpha
                     });
-                }
-                else{
-                    $(this).css({
-                        left: index*100+'%',
-                        width: $(this).outerWidth()
-                    });
-                }
+                 }
+				
             });
 
             // Count the total slides
@@ -123,10 +143,15 @@
 
         // Bind the function that recalculates the width of each slide on a resize.
         $(window).resize(function(){
+			var cacheWidth = 0;
+		
             $(options.slidesContainer).find(options.slides).each(function(index){
                 // Reset width; otherwise it will keep the same width as before
                 $(this).css('width','');
-                $(this).css({x: index*100+'%',width: $(this).outerWidth()});
+				
+				cacheWidth = ($(this).outerWidth() > cacheWidth) ? $(this).outerWidth() : cacheWidth;
+				
+                $(this).css({x: ($(this).data('index') - obj.currentSlideindex) * 100 + '%', width: cacheWidth});
             });
         });
 
@@ -165,10 +190,27 @@
 
             // Slide animation, here we determine if we can use CSS transitions (transit.js) or have to use jQuery animate
             $(options.slidesContainer).find(options.slides).each(function(index){
-                if ($.support.transition && jQuery().transition)
-                    $(this).stop().transition({x: ($(this).data('index')-obj.currentSlide)*100+'%'}, options.animateDuration, options.animationEasing);
-                else
-                    $(this).stop().animate({left: ($(this).data('index')-obj.currentSlide)*100+'%'}, options.animateDuration, triggerSlideEnd);
+			
+				if(options.transition == "slide"){                    
+					if ($.support.transition && jQuery().transition)
+						$(this).stop().transition({x: ($(this).data('index')-obj.currentSlide)*100+'%'}, options.animateDuration, options.animationEasing);
+					else
+						$(this).stop().animate({left: ($(this).data('index')-obj.currentSlide)*100+'%'}, options.animateDuration, triggerSlideEnd);
+                }
+				
+                if(options.transition == "fade"){
+                    var alpha = (index == obj.currentSlide) ? 1 : 0;
+
+                    if(index == obj.currentSlide){
+                        $(this).show();
+                    }
+
+                    if ($.support.transition && jQuery().transition)
+                        $(this).stop().transition({opacity: alpha}, options.animateDuration, triggerSlideEnd);
+                    else
+                        $(this).stop().animate({opacity: alpha}, options.animateDuration, triggerSlideEnd);
+                }
+			
             });
 
             // Somehow the callback from $.transition doesn't work, so we create ow custom bind here
@@ -177,6 +219,17 @@
             // Create trigger point after a slide slides. All the slides return a TransitionEnd; to prevent a repeating trigger we keep a slided var
             function triggerSlideEnd(){
                 if(!slided){
+					if(options.transition == "fade"){
+                        $(options.slidesContainer).children(options.slides).each(function(index){
+                            if($(this).data('index') == obj.currentSlide){
+                                $(this).show();
+                            }
+                            else{
+                                $(this).hide();
+                            }
+                        });
+                    }
+				
                     $(element).trigger({
                         type: "afterSliding",
                         prevSlide: prevSlide,

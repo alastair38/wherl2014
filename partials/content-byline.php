@@ -1,3 +1,22 @@
-<p class="byline">
-	<p>Posted on <?php the_time('F j, Y') ?> by <?php the_author_posts_link(); ?>  - <?php the_category(', ') ?></p>
-</p>	
+<div class="byline">
+   
+    
+    <?php 
+
+						$persons = get_field('resource_author');
+
+						?>
+						<?php if( $persons ): ?>
+				
+							<?php foreach( $persons as $person ): ?>
+							<div class="blog-author">
+									by <a href="<?php echo get_permalink( $person->ID ); ?>">
+										<?php echo get_the_title( $person->ID ); ?>
+									</a>
+                            </div>	
+							<?php endforeach; ?>
+							
+						<?php endif; ?>
+						<span class="blog-date"><?php the_time('F j Y') ?></span>
+						 
+</div>	

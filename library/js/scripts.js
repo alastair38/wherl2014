@@ -133,3 +133,7 @@ jQuery(document).ready(function(){
 
     jQuery(".slider").simpleSlider(options);
 });
+
+jQuery(document).ready(function() {
+	jQuery.DivasCookies();
+});

@@ -2,9 +2,9 @@
 			
 			<div id="content">
 			
-				<div id="inner-content" class="row clearfix">
-				
-				    <div id="main" class="large-8 medium-8 columns first clearfix" role="main">
+				<div id="inner-content" class="clearfix">
+				  
+				    <div id="main" class="large-12 medium-8 columns first clearfix" role="main">
 				
 					    <?php if (is_category()) { ?>
 						    <h1>

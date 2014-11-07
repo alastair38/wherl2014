@@ -10,9 +10,8 @@ $postid = get_the_ID();
                         $persons = get_posts(array(
                             'post_type' => 'people',
                             'posts_per_page' => 10,
-                            'orderby' => 'surname',
-                            'order' => 'ASC',
-                            'meta_key' => 'surname',
+                            'orderby'    => 'date',
+	                        'order'      => 'ASC',
                             'meta_query' => array(
                                 array(
                                     'key' => 'academic_group', // name of custom field
@@ -25,13 +24,15 @@ $postid = get_the_ID();
                         ?>
 
                         <?php if( $persons ): ?>
-                        
+                        <h3 class="people-title">Team Members</h3>
                         <?php foreach( $persons as $person ): ?>
-                        <div class="large-4 medium-8 columns clearfix">
-                        <div class="people-details">
-                         <h3><?php echo get_the_title( $person->ID ); ?></h3>
-                        <?php echo get_the_post_thumbnail( $person->ID ); ?>
-                        <p><?php echo the_field('biography', $person->ID); ?></p>
+                        <div class="large-4 medium-6 small-12 columns end clearfix">
+                           
+                            <div class="people-details">
+                            <?php $permalink = get_permalink($person->ID);?>
+                             <h3><a href="<?php echo $permalink;?>"><?php echo get_the_title( $person->ID ); ?></a></h3>
+                            <?php echo get_the_post_thumbnail( $person->ID ); ?>
+                            <p><?php echo the_field('work_position', $person->ID); ?></p>
                             </div>
                        
                         </div>

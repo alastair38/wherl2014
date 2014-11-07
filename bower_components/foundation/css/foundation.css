@@ -50,7 +50,7 @@ body {
 
 body {
   background: white;
-  color: #222222;
+  color: #666666;
   padding: 0;
   margin: 0;
   font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
@@ -63,6 +63,7 @@ body {
 
 a:hover {
   cursor: pointer;
+  color: #666;
 }
 
 img {
@@ -1378,8 +1379,8 @@ select {
   position: relative;
   padding: 0.875rem 1.5rem 0.875rem 0.875rem;
   font-size: 0.8125rem;
-  background-color: #4e4e4e;
-  border-color: #434343;
+  background-color: transparent;
+  border-color: transparent;
   color: white;
 }
 .alert-box .close {
@@ -2810,7 +2811,7 @@ select {
 .breadcrumbs > * a,
 .breadcrumbs > * span {
   text-transform: uppercase;
-  color: #4e4e4e;
+  color: transparent;
 }
 .breadcrumbs > *.current {
   cursor: default;
@@ -2865,8 +2866,8 @@ button, .button {
   padding-left: 2rem;
   font-size: 1rem;
   /*     @else                            { font-size: $padding - rem-calc(2); } */
-  background-color: #4e4e4e;
-  border-color: #3e3e3e;
+  background-color: transparent;
+  border-color: transparent;
   color: white;
   -webkit-transition: background-color 300ms ease-out;
   -moz-transition: background-color 300ms ease-out;
@@ -2879,7 +2880,7 @@ button, .button {
   /*     @else                            { font-size: $padding - rem-calc(2); } */
 }
 button:hover, button:focus, .button:hover, .button:focus {
-  background-color: #3e3e3e;
+  background-color: transparent;
 }
 button:hover, button:focus, .button:hover, .button:focus {
   color: white;
@@ -2963,8 +2964,8 @@ button.round, .button.round {
   border-radius: 1000px;
 }
 button.disabled, button[disabled], .button.disabled, .button[disabled] {
-  background-color: #4e4e4e;
-  border-color: #3e3e3e;
+  background-color: transparent;
+  border-color: transparent;
   color: white;
   cursor: default;
   opacity: 0.7;
@@ -2972,13 +2973,13 @@ button.disabled, button[disabled], .button.disabled, .button[disabled] {
   box-shadow: none;
 }
 button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
-  background-color: #3e3e3e;
+  background-color: transparent;
 }
 button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
   color: white;
 }
 button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
-  background-color: #4e4e4e;
+  background-color: transparent;
 }
 button.disabled.secondary, button[disabled].secondary, .button.disabled.secondary, .button[disabled].secondary {
   background-color: #e7e7e7;
@@ -4441,7 +4442,7 @@ kbd {
   margin-bottom: inherit;
   padding: 0.25rem 0.5rem 0.375rem;
   font-size: 0.6875rem;
-  background-color: #4e4e4e;
+  background-color: transparent;
   color: white;
 }
 .label.radius {
@@ -4895,13 +4896,13 @@ ul.pagination li.unavailable:hover a, ul.pagination li.unavailable a:focus {
   background: transparent;
 }
 ul.pagination li.current a {
-  background: #4e4e4e;
+  background: transparent;
   color: white;
   font-weight: bold;
   cursor: default;
 }
 ul.pagination li.current a:hover, ul.pagination li.current a:focus {
-  background: #4e4e4e;
+  background: transparent;
 }
 ul.pagination li {
   float: left;
@@ -4945,10 +4946,10 @@ ul.pagination li {
 .panel.callout {
   border-style: solid;
   border-width: 1px;
-  border-color: #d9d9d9;
+  border-color: rgba(213, 213, 213, 0);
   margin-bottom: 1.25rem;
   padding: 1.25rem;
-  background: #f4f4f4;
+  background: rgba(240, 240, 240, 0);
 }
 .panel.callout > :first-child {
   margin-top: 0;
@@ -4967,7 +4968,7 @@ ul.pagination li {
   line-height: 1.4;
 }
 .panel.callout a:not(.button) {
-  color: #4e4e4e;
+  color: transparent;
 }
 .panel.radius {
   -webkit-border-radius: 3px;
@@ -5036,7 +5037,7 @@ ul.pagination li {
   margin-bottom: 0.625rem;
 }
 .progress .meter {
-  background: #4e4e4e;
+  background: transparent;
   height: 100%;
   display: block;
 }
@@ -5113,12 +5114,12 @@ ul.pagination li {
   border-radius: 3px;
 }
 .range-slider.radius .range-slider-handle {
-  background: #4e4e4e;
+  background: transparent;
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
 .range-slider.radius .range-slider-handle:hover {
-  background: #454545;
+  background: transparent;
 }
 .range-slider.round {
   background: #fafafa;
@@ -5126,12 +5127,12 @@ ul.pagination li {
   border-radius: 1000px;
 }
 .range-slider.round .range-slider-handle {
-  background: #4e4e4e;
+  background: transparent;
   -webkit-border-radius: 1000px;
   border-radius: 1000px;
 }
 .range-slider.round .range-slider-handle:hover {
-  background: #454545;
+  background: transparent;
 }
 
 .range-slider-active-segment {
@@ -5150,10 +5151,10 @@ ul.pagination li {
   height: 1.375rem;
   border: 1px solid none;
   cursor: pointer;
-  background: #4e4e4e;
+  background: transparent;
 }
 .range-slider-handle:hover {
-  background: #454545;
+  background: transparent;
 }
 
 .reveal-modal-bg {
@@ -5307,13 +5308,13 @@ dialog[open] {
 }
 .side-nav li a:not(.button) {
   display: block;
-  color: #4e4e4e;
+  color: transparent;
 }
 .side-nav li a:not(.button):hover, .side-nav li a:not(.button):focus {
-  color: #838383;
+  color: rgba(77, 77, 77, 0);
 }
 .side-nav li.active > a:first-child:not(.button) {
-  color: #838383;
+  color: rgba(77, 77, 77, 0);
   font-weight: normal;
   font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 }
@@ -5478,7 +5479,7 @@ dialog[open] {
   -webkit-border-radius: 3px;
   border-radius: 3px;
   font-weight: normal;
-  background: #4e4e4e;
+  background: transparent;
   padding: 0.1875rem 1rem;
   cursor: default;
   color: white;
@@ -5486,7 +5487,7 @@ dialog[open] {
 .sub-nav dt.active a:hover,
 .sub-nav dd.active a:hover,
 .sub-nav li.active a:hover {
-  background: #434343;
+  background: transparent;
 }
 
 div.switch {
@@ -5837,8 +5838,8 @@ table tfoot tr td {
   transition: all 200ms ease-out;
 }
 .th:hover, .th:focus {
-  -webkit-box-shadow: 0 0 6px 1px rgba(78, 78, 78, 0.5);
-  box-shadow: 0 0 6px 1px rgba(78, 78, 78, 0.5);
+  -webkit-box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.5);
 }
 .th.radius {
   -webkit-border-radius: 3px;
@@ -5853,8 +5854,8 @@ table tfoot tr td {
   color: #333333;
 }
 .has-tip:hover, .has-tip:focus {
-  border-bottom: dotted 1px #232323;
-  color: #4e4e4e;
+  border-bottom: dotted 1px transparent;
+  color: transparent;
 }
 .has-tip.tip-left, .has-tip.tip-right {
   float: none !important;
@@ -5900,8 +5901,8 @@ table tfoot tr td {
   left: 2rem;
 }
 .tooltip.opened {
-  color: #4e4e4e !important;
-  border-bottom: dotted 1px #232323 !important;
+  color: transparent !important;
+  border-bottom: dotted 1px transparent !important;
 }
 
 .tap-to-close {
@@ -6114,19 +6115,19 @@ meta.foundation-mq-topbar {
   padding: 12px 0 12px 0;
   padding-left: 18.33333px;
   font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  font-size: 0.8125rem;
+  font-size: 16px;
   font-weight: normal;
   text-transform: none;
   background: #666666;
 }
 .top-bar-section ul li > a.button {
-  background: #4e4e4e;
+  background: transparent;
   font-size: 0.8125rem;
   padding-right: 18.33333px;
   padding-left: 18.33333px;
 }
 .top-bar-section ul li > a.button:hover {
-  background: #393939;
+  background: transparent;
 }
 .top-bar-section ul li > a.button.secondary {
   background: #e7e7e7;
@@ -6826,12 +6827,12 @@ td {
 
 /* Default Link Styles */
 a {
-  color: white;
+  color: #666666;
   text-decoration: none;
   line-height: inherit;
 }
 a:hover, a:focus {
-  color: #dbdbdb;
+  color: #585858;
 }
 a img {
   border: none;
@@ -6861,7 +6862,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
-  color: #222222;
+  color: #666666;
   text-rendering: optimizeLegibility;
   margin-top: 0.2rem;
   margin-bottom: 0.5rem;
@@ -6869,7 +6870,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
   font-size: 60%;
-  color: #6f6f6f;
+  color: #9c9c9c;
   line-height: 0;
 }
 
@@ -6899,7 +6900,7 @@ h6 {
 
 .subheader {
   line-height: 1.4;
-  color: #6f6f6f;
+  color: #9c9c9c;
   font-weight: normal;
   margin-top: 0.2rem;
   margin-bottom: 0.5rem;
@@ -7010,7 +7011,7 @@ abbr,
 acronym {
   text-transform: uppercase;
   font-size: 90%;
-  color: #222222;
+  color: #666666;
   border-bottom: 1px dotted #dddddd;
   cursor: help;
 }
@@ -7028,20 +7029,20 @@ blockquote {
 blockquote cite {
   display: block;
   font-size: 0.8125rem;
-  color: #555555;
+  color: #898989;
 }
 blockquote cite:before {
   content: "\2014 \0020";
 }
 blockquote cite a,
 blockquote cite a:visited {
-  color: #555555;
+  color: #898989;
 }
 
 blockquote,
 blockquote p {
   line-height: 1.6;
-  color: #6f6f6f;
+  color: #9c9c9c;
 }
 
 /* Microformats */

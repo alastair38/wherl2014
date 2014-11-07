@@ -8,7 +8,6 @@ and is called at the beginning, after that we call the rest
 of the styles inside media queries
 ******************************************************************/
 
-@import "//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700";
 
 //
 // IMPORTING STYLES
@@ -39,6 +38,8 @@ the other stylesheets. Remember, keep it light: Speed is Important.
 // styles in small.scss
 @import "small";
 
+
+    
 
 /*
 MEDIUM
@@ -83,17 +84,43 @@ XXLARGE
 
 } // end of media query
 
+
+/* WHERL COLOR VARIABLES */
+
+$theme-color:  #2f8888;
+$content-bg: #fff;
+$page-bg: #f2f2f2;
+$text-color: #666;
+
+
+/* WHERL DIMENSION VARIABLES */
+
+$latest-height: 150px;
+
+
+.h1, h2, h3, h4, h5, h6, * {
+    font-family: 'Open Sans Condensed';
+}
+
+
+/* HOME PAGE + HEADER STYLING */
+
 .home #main {
-    background: url('https://unsplash.imgix.net/37/rVvORijmSGFcCD1Qin5e_2014-02-23%2006.21.30%201.jpg?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=792b47a1e2bb456e9f114c5fe3bcdf4e');
+    background: url('http://localhost/wherl/wp-content/themes/wherl2014/home.jpg');
     background-size: cover;
     height: 450px;
-    margin-bottom: 6em;
+    margin-bottom: 3em;
     margin-top: 0;
     position: relative;
 }
 
 .title a {
-    color: #666;
+    color: $text-color;
+}
+
+.title-mob img {
+    width: 28px;
+    padding: 0 5px 5px 0;
 }
 
 #inner-content {
@@ -112,85 +139,82 @@ h1.title {
     width: 200px;
     text-indent: 100%;
 white-space: nowrap;
-overflow: hidden;
-    
+overflow: hidden;   
 }
 
-p.source-org.copyright {
-    text-align: center;
-}
-
-
-.caption {
-    position: absolute;
-    top: 0%;
-    left: 15%;
-    width: 70%;
-}
-
-.caption p {
-    padding: 1em;
-    font-size: 2em;
-    color: #666;
-    & img {
-        width: 60%;
-        margin-left: 20%;
-    }
-}
-
-.home-links {
-    height: 200px;
-    padding: 1em;
-
-    margin-bottom: 2em;
-    & h3 {
-        text-align: center;
-    }
-}
-
-.project {
-        background: #c0e1fd;
-    }
-
+.home-links,
+.project,
 .people {
-        background: #666;
-    }
-
-.people-details {
-    background: lightblue;
-    padding: 1em;
-    margin-bottom: 2em;
-    height: 250px;
-    & h3 {
-        font-size: 1em;
-    }
+    padding: .5em;
+    margin: 0em 2em 3em 2em;
+    & h5 {
+        text-align: center;
+        text-transform: uppercase;
+        & a {
+            color: #4e4e4e;
+        }
+    }  
 }
 
-.people-title {
-    text-align: center;
-}
-
-.news {
+.home-links.blog {
         background: #E38A8A;
     }
 
-.findings {
-    background: #E6D43D;
+/* HOME + LATEST */
+
+.latest {
+    background: $theme-color;
+    padding: .5em 1em 2em 1em;
+    & h5 {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    }
 }
 
+.large-4 {
+    position: relative;
+}
+
+.latest-finding,
+.latest-blog,
+.latest-news {
+    background: $content-bg;
+    height: $latest-height;
+    margin-bottom: 1em;
+}
+
+.latest-finding,
+.latest-news {
+    padding: 2em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.latest-blog {
+    & img {
+        width: 50%;
+        height: $latest-height;
+    }
+    & h6 {
+        width: 40%;
+        position: absolute;
+        top: 0;
+        left: 55%;
+    }
+}
 
 /* SLIDER */
+
 
  
 .slider{
 	width: 100%;
 	height: 300px;
 	overflow: hidden;
-	position: relative;
-	
+	position: relative;	
 }
 
- 
 .slide{
 	width: 100%;
 	top: 0;
@@ -199,20 +223,35 @@ p.source-org.copyright {
 }
  
 .slidecontent{
-	position: absolute;
-	
-	width:92%;
-	margin:5%;
-	padding: 15px 5px;
-	color: white;
+	position: relative;
+	padding: 45px 5px;
+    
 }
- 
-.slidecontent a {
-color: #fff;
-text-transform: uppercase;
-text-decoration: underline;
+
+.caption {
+     position: absolute;
+    padding:0;
+    bottom: 0;
+   left: 0;
+   top: 0;
+   margin: auto;
+   right: 0;
+   width: 90%;
+    & img {
+        width: 50%;
+        margin: 5% 25%;
+    }
 }
- 
+
+.two,
+.three {
+    margin-top: 5em;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    color: $text-color;
+}
+
+
 #slideposition{
 	position: absolute;
 	bottom: 0px;
@@ -228,7 +267,7 @@ text-decoration: underline;
 	display: inline-block;
 	height: 10px;
 	width: 10px;
-	background: #666;
+	background: $text-color;
 	margin: 0px 7px;
 	padding: 0;
 	-webkit-border-radius: 50%;
@@ -241,6 +280,502 @@ text-decoration: underline;
 #slideposition ul li.indicator.active{
 	background: lightblue;
 }
+
+
+/* OPERA POSITIONAL FIXES FOR SLIDER + TOP MARGIN OF CONTENT */
+
+x:-o-prefocus, .slider {
+    height: 450px;
+}
+
+x:-o-prefocus, .two {
+    margin-top: 4.5em;
+}
+
+x:-o-prefocus, .three {
+    margin-top: 9em;
+}
+
+x:-o-prefocus, #inner-content {
+    margin-top: 3em;
+}
+
+
+x:-o-prefocus, .has-dropdown:hover > .dropdown {
+    overflow: visible !important;
+    }
+
+/* FOOTER */
+
+p.source-org.copyright {
+    text-align: center;
+}
+
+/* PROJECT PAGES */
+
+.project {
+        background: rgba(192, 225, 253, 0.75);
+}
+
+.project-findings {
+    padding: 5px;
+}
+
+li.pagenav {
+    list-style-type:none;
+    text-align: center;
+    margin-top: 1.5em;
+}
+
+.project-members {
+    background: $content-bg;
+    margin-top: 1em;
+    box-shadow: 0px 1px 2px 0px $text-color;
+}
+
+ul.team-projects {
+    list-style-type: none;
+    margin-left: 0;
+}
+
+.project-members img.attachment-post-thumbnail.wp-post-image {
+    width: 10%;
+    margin-left: -15px;
+}
+
+#project-team {
+    padding-bottom: 2em;
+}
+
+
+/* FINDINGS + SEARCH PAGE */
+
+.findings {
+    background: rgba(230, 212, 61, 0.75);
+}
+
+.findings-authors {
+    margin: 1em 0em 1em 0em;
+     line-height: 1em;
+    & li {
+    list-style-type: none;
+    display: inline;
+    margin-right: 2px;
+    padding: 2px;
+    & a {
+        color: $theme-color;
+    }
+    }
+}
+
+li.findings-type {
+    background: $text-color;
+    color: white;
+    line-height: 2.5em;
+}
+
+li.findings-project {
+    & a {
+        color: $theme-color;
+    }
+}
+
+.archive-findings {
+    margin-top: 1em;
+    box-shadow: 0px 1px 2px 0px #999;
+    & h6 {
+        text-transform: uppercase;
+    }
+}
+
+#related-findings {
+    padding: 0;
+}
+
+input.wpas-submit {
+    border: none;
+    background: $text-color;
+    color: $content-bg;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+#reset {
+    background: $content-bg;
+    margin-top: 1em;
+    padding: 5px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#search {
+    background: $theme-color; 
+    margin-top: 1em; 
+    padding-bottom: 1em;
+    & h5 {
+        text-align: center;
+        text-transform: uppercase;
+        color: $content-bg;
+    }
+}
+
+select {
+    border: none;
+}
+
+/* PAGINATION */
+
+nav.wp-prev-next ul {
+    list-style-type: none;
+}
+
+/* PEOPLE PAGES */
+
+.people {
+        background: rgba(255, 99, 71, 0.75);
+    }
+
+.large-4 .people,
+.large-4 .project {
+    height: 200px;
+}
+
+.people-details {
+    background: $page-bg;
+    padding: 1em;
+    margin-bottom: 2em;
+    height: 250px;
+    & h3 {
+        font-size: 1.25em;
+    }
+}
+
+label {
+    font-size: 1.25em;
+    text-align: center;
+    margin: 15px 18px 15px 0px;
+    background: white;
+    text-transform: uppercase;
+}
+
+#role {
+    font-size: 1.25em;
+    text-transform: uppercase;
+    text-align: center;
+    background: $theme-color;
+    color: white;
+    margin: 15px 18px -15px 0px;
+}
+
+.people-title {
+    font-size: 1.25em;
+    text-transform: uppercase;
+    text-align: center;
+    background: $theme-color;
+    color: white;
+}
+
+#people {
+    border: 1px solid $page-bg;
+    padding: 1em 0;
+}
+
+.work-details {
+    background: $page-bg;
+    & ul {
+        list-style-type: none;
+        padding: 5px 0px;
+    }
+}
+
+#main a,
+#people a {
+    color: $theme-color;
+}
+
+/*TWITTER WIDGET*/
+
+.tweeting {
+    padding: 3em;
+    & h5 {
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
+
+/* GENERAL ARTICLE STYLING */
+
+#people, 
+#search-page, 
+#main-people, 
+#main-project, 
+#single-project, 
+#single-team, 
+#single-latest {
+    background: white;
+    padding-bottom: 2em;
+    & a {
+        color: $theme-color;
+    }
+}
+
+article {
+    background: white;
+     margin-bottom: 40px;
+    & a {
+        color: $theme-color;
+    }
+}
+
+#content {
+    background: $page-bg
+}
+
+.entry-content {
+    padding: 10px;
+}
+
+.single h1, .page h1, .blog h1, .archive h1 {
+    font-size: 1.75em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+/*BLOG POSTS + BLOG ARCHIVE */
+
+.blog-byline {
+    display: inline-block;
+    padding: 5px 0px;
+}
+
+.blog #content,
+.events,
+.news {
+    background: #f0f0f0;
+}
+.blog-article {
+    background: $content-bg;
+    height:auto;
+    padding-bottom: 1em;
+    & span {
+        font-weight: bold;
+    }
+}
+
+.blog-thumbnail {
+    margin: -3px 0 0 0;
+    padding: 0;
+    position: relative;
+}
+
+.blog-thumbnail-caption {
+    position: absolute;
+    padding: 3px;
+    left: 1%;
+    top: 85%;
+    font-size: .85em;
+    background: $content-bg;
+}
+
+.archive-thumbnail {
+    margin:0 0 0.5em 0;
+    padding: 0;
+     height: 200px;
+}
+
+.archive-thumbnail img,
+.single-thumbnail img {
+    width: 100%;
+    height: 200px;
+}
+
+.blog-thumbnail img {
+    width: 100%;
+    height: 350px;
+}
+
+.single-thumbnail {
+    margin-top: 5px;
+}
+
+.date {
+    position: relative;
+    background: #e6d43d;
+    font-size: 1.25em;
+    height: auto;
+    padding: 5px 15px;
+    & span {
+        text-transform: uppercase;
+    }
+}
+
+.blog-author,
+.blog-date,
+.blog-category {
+    display: inline-block;
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+}
+
+.blog-date {
+    font-size: 1.25em;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+#blog-share ul {
+    display: inline-block; 
+    width: 70%; 
+    margin: 15%; 
+    text-align: center;
+}
+
+/* SOCIAL ICONS + CONTACT */
+
+.twitter {
+    background: #2EBFEC;
+}
+
+.twitter,
+.email,
+.phone,
+.web,
+.contact-list {
+    padding: 5px;
+    text-align: center;
+    margin-top: 5px;
+}
+.email {
+    background: tomato;
+}
+.phone {
+    background: $text-color;
+    color: $content-bg;
+}
+
+.web {
+    background: #e6d43d;
+    margin-bottom: 1em;
+}
+
+.contact-list {
+    background: $theme-color;
+    color: $content-bg;
+    text-transform: uppercase;
+}
+
+.fi-mail,
+.fi-social-twitter,
+.fi-telephone,
+.fi-mobile,
+.fi-web,
+.fi-social-linkedin {  
+    color: $content-bg;
+}
+
+#contact .fi-mail,
+#contact .fi-social-twitter,
+#contact .fi-telephone,
+#contact .fi-mobile,
+#contact .fi-web,
+#contact .fi-social-linkedin {  
+    padding: 0 3px;
+}
+
+#contact a {
+    color: $content-bg;
+}
+
+/* SHARE LINKS */
+
+ul.share-links.columns {
+    list-style-type: none;
+    margin-left: -15px;
+}
+
+#main ul.share-links.columns {
+    margin-left: -5px;
+}
+
+.share-links.columns li {
+   display: inline-block;
+   padding: .2em;
+   width: 30px;
+   height: 30px;
+   text-align: center;
+   background: tomato;
+   border-radius: 50%;
+}
+
+.share-links.columns li .fi-social-linkedin,
+.share-links.columns li .fi-social-facebook {
+    color:$content-bg;
+}
+
+/* EVENTS */
+
+.event-date { 
+    text-align:center; 
+    color: #414141; 
+    line-height: 1.25em;
+}
+
+.event-date h6 {
+    text-transform: uppercase;
+    color: #414141;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#map img {
+    width: 100%;
+}
+
+
+@media only screen and (max-width: 40.062em) {
+    .single-blog .columns {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    #single-latest,
+    .single ul.share-links.columns {
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem;
+    }
+    .two,
+    .three{
+        margin-top: 55px;
+        padding: 10px;
+        font-size: 80% !important;
+        color: #999;
+        background: rgba(255,255,255, .8);
+        height: 130px;
+    }
+    .caption img {
+        margin-top: 55px !important;
+    }
+    .home #main {
+    height: 250px !important;
+    }
+    #search-results, .person-details, #contact {
+        padding: 0;
+    }
+    #inner-content {
+        padding: 3em 0em;
+    }
+    #main-project a .project, #main-people a .people {
+        margin: 0 0 1em 0;
+    }
+    #main-people .large-4, #main-project .large-4, #people .large-9 {
+        padding: 0em;
+    }
+    .home-links {
+        margin-bottom: 1em;
+    }
+}
+
 /*
 RETINA (2x RESOLUTION DEVICES)
 This applies to the retina iPhone (4s) and iPad (2,3) along with

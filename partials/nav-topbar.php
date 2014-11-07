@@ -1,5 +1,5 @@
 <div class="large-12 columns">
-	<div class="sticky">
+	<div class="fixed">
 	
 	<!-- If you want to use the more traditional "fixed" navigation.
 		 simply replace "sticky" with "fixed" -->

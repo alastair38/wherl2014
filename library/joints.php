@@ -133,7 +133,8 @@ function joints_scripts_and_styles() {
 
     // adding Foundation scripts file in the footer
     wp_enqueue_script( 'foundation-js', get_template_directory_uri() . '/bower_components/foundation/js/foundation.min.js', array( 'jquery' ), '', true );
-      
+
+
     // adding Transit JS scripts file in the footer
     wp_enqueue_script( 'transit-js', get_template_directory_uri() . '/library/js/transit.js', array( 'jquery' ), '', true );
       
@@ -144,9 +145,17 @@ function joints_scripts_and_styles() {
       // adding Simple Slider JS scripts file in the footer
     wp_enqueue_script( 'simpleslider-js', get_template_directory_uri() . '/library/js/simpleSlider.js', array( 'jquery' ), '', true );
 
+if ( is_front_page() ) {
+       // adding Twitter JS scripts file in the footer
+    wp_enqueue_script( 'twitter-js', get_template_directory_uri() . '/library/js/twitter.js', array( 'jquery' ), '', true );
+}
+      
+           // adding Divas Cookies JS scripts file in the footer
+    wp_enqueue_script( 'divascookies-js', get_template_directory_uri() . '/library/js/divascookies.js', array( 'jquery' ), '', true );
 
 
-    wp_enqueue_style( 'googlefonts', 'http://fonts.googleapis.com/css?family=Oxygen|Open+Sans+Condensed:300');
+
+    wp_enqueue_style( 'googlefonts', 'http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
 
     // register foundation stylesheet
     wp_enqueue_style( 'foundation-stylesheet', get_stylesheet_directory_uri() . '/bower_components/foundation/css/foundation.min.css', array(), '', 'all' );
@@ -159,6 +168,9 @@ function joints_scripts_and_styles() {
 
     // register main stylesheet
     wp_enqueue_style( 'joints-stylesheet', get_stylesheet_directory_uri() . '/library/css/style.css', array(), '', 'all' );
+      
+       // register Divas Cookies stylesheet
+    wp_enqueue_style( 'divascookies-stylesheet', get_stylesheet_directory_uri() . '/library/css/divascookies.css', array(), '', 'all' );
 
     // comment reply script for threaded comments
     if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {

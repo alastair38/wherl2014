@@ -5,7 +5,7 @@
 				<div id="inner-content" class="row clearfix">
 					
 				    <div id="main" class="large-8 medium-8 columns first clearfix" role="main">
-				
+				 
 						<h1 class="page-title"><?php post_type_archive_title(); ?></h1>
 						<dl class="accordion" data-accordion>
 

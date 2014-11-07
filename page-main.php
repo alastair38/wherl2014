@@ -35,15 +35,15 @@ Template Name: Main Landing Pages
     				
                    
                 	<?php
-	$mypages = get_pages( array( 'child_of' => $post->ID, 'exclude' => '24', 'sort_order' => 'desc', 'parent' => $post->ID ) );
+	$mypages = get_pages( array( 'child_of' => $post->ID, 'exclude' => '24', 'sort_order' => 'asc', 'parent' => $post->ID ) );
 
 	foreach( $mypages as $page ) {		
-		$content = $page->post_content;
-		$content = apply_filters( 'the_content', $content );
+		$content = $page->post_excerpt;
+		$content = apply_filters( 'the_excerpt', $content );
         $post_data = get_post($post->post_parent);
         
 	?>
-		<div class="large-4 columns">
+		<div class="large-4 columns end">
 		<div class="home-links <?php echo $post->post_name; ?>">
 		<h3><a href="<?php echo get_page_link( $page->ID ); ?>"><?php echo $page->post_title; ?></a></h3>
 		<?php echo $content; ?></div>
