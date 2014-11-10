@@ -77,7 +77,7 @@ if ( is_user_logged_in() ) {;?>
                                 <div class="twitter"><i class="fi-social-twitter"></i><a href="<?php the_field('twitter'); ?>">Twitter</a></div>
                             <?php endif; ?>
                             <?php if( get_field('linkedin') ): ?>
-                                <div class="web"><i class="fi-social-linkedin"></i><a href="<?php the_field('linkedin'); ?>">LinkedIn</a></div>
+                                <div class="linkedin"><i class="fi-social-linkedin"></i><a href="<?php the_field('linkedin'); ?>">LinkedIn</a></div>
                             <?php endif; ?>
                             <?php if( get_field('phone_landline') ): ?>
                                 <div class="phone"><i class="fi-telephone"></i><?php the_field('phone_landline'); ?></div>

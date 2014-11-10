@@ -63,14 +63,8 @@ echo ' - ' . $date->format('d F Y'); ?>
                              
                             </div>
                             
-                            <div class="large-12 columns">
-                            <article>
+                            <div id="map" class="large-12 columns">
                             
-                              	
-                              
-
-                           
-                                 <div id="map"> 
                            
                             <?php 
 
@@ -83,10 +77,7 @@ $location = get_field('event_map');
                              <a href="geo:<?php echo $location['lat']; ?>,<?php echo $location['lng']; ?>;u=35" class="hide-for-large-only"><img src="https://maps.googleapis.com/maps/api/staticmap?zoom=15&size=600x300&scale=2&maptype=roadmap
           &markers=color:green%7C<?php echo $location['lat']; ?>,<?php echo $location['lng']; ?>"></a>
                               
-                              </div>
-                         
-				            
-                            </article>                          
+                                                      
                              </div>   
                           
                            

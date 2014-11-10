@@ -1355,8 +1355,23 @@ XXLARGE
   ******************************************************************/ }
 /* WHERL COLOR VARIABLES */
 /* WHERL DIMENSION VARIABLES */
-.h1, h2, h3, h4, h5, h6, * {
+h1, h2, h3, h4, h5, h6, * {
   font-family: 'Open Sans Condensed'; }
+
+/* OVERIDE LINK HOVER FOR MAIN CONTENT SECTION*/
+#content a:hover {
+  background: #f3f3f3; }
+
+/* CHANGE TOP-BAR + MAIN-MENU BACKGROUND */
+.top-bar,
+#menu-main li a {
+  background: #2f8888; }
+
+#menu-main li a:hover {
+  color: #414141; }
+
+#menu-main .active li a {
+  background: #2f5353; }
 
 /* HOME PAGE + HEADER STYLING */
 .home #main {
@@ -1370,6 +1385,18 @@ XXLARGE
 .title a {
   color: #666; }
 
+.top-bar-section ul li.active a {
+  background: #49c9c9 !important; }
+
+.tab-bar {
+  background: #fff; }
+
+.tab-bar .menu-icon span {
+  box-shadow: 0 0px 0 1px #414141,0 7px 0 1px #414141,0 14px 0 1px #414141; }
+
+.left-small {
+  border-right: none; }
+
 .title-mob img {
   width: 28px;
   padding: 0 5px 5px 0; }
@@ -1378,7 +1405,7 @@ XXLARGE
   padding: 3em; }
 
 .home #container {
-  margin-top: 0em;
+  margin-top: 0;
   padding: 0; }
 
 h1.title {
@@ -1608,7 +1635,8 @@ input.wpas-submit {
     color: #fff; }
 
 select {
-  border: none; }
+  border: none;
+  margin-bottom: 4px; }
 
 /* PAGINATION */
 nav.wp-prev-next ul {
@@ -1792,6 +1820,7 @@ article {
 .email,
 .phone,
 .web,
+.linkedin,
 .contact-list {
   padding: 5px;
   text-align: center;
@@ -1800,7 +1829,7 @@ article {
 .email {
   background: tomato; }
 
-.phone {
+.phone, .linkedin {
   background: #666;
   color: #fff; }
 
@@ -1832,6 +1861,9 @@ article {
 #contact a {
   color: #fff; }
 
+#contact img {
+  width: 100%; }
+
 /* SHARE LINKS */
 ul.share-links.columns {
   list-style-type: none;
@@ -1842,7 +1874,7 @@ ul.share-links.columns {
 
 .share-links.columns li {
   display: inline-block;
-  padding: .2em;
+  padding: .5em .2em;
   width: 30px;
   height: 30px;
   text-align: center;
@@ -1888,12 +1920,14 @@ ul.share-links.columns {
     height: 130px; }
 
   .caption img {
-    margin-top: 55px !important; }
+    width: 95% !important;
+    margin: 55px 0 0 0 !important; }
 
   .home #main {
+    margin-top: 2em !important;
     height: 250px !important; }
 
-  #search-results, .person-details, #contact {
+  #search-results, .person-details, #single-team .large-4, #contact {
     padding: 0; }
 
   #inner-content {
@@ -1906,7 +1940,10 @@ ul.share-links.columns {
     padding: 0em; }
 
   .home-links {
-    margin-bottom: 1em; } }
+    margin-bottom: 1em; }
+
+  #map {
+    padding: 0; } }
 /*
 RETINA (2x RESOLUTION DEVICES)
 This applies to the retina iPhone (4s) and iPad (2,3) along with

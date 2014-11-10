@@ -98,10 +98,30 @@ $text-color: #666;
 $latest-height: 150px;
 
 
-.h1, h2, h3, h4, h5, h6, * {
+h1, h2, h3, h4, h5, h6, * {
     font-family: 'Open Sans Condensed';
 }
 
+/* OVERIDE LINK HOVER FOR MAIN CONTENT SECTION*/
+
+#content a:hover {
+    background: #f3f3f3;
+}
+
+/* CHANGE TOP-BAR + MAIN-MENU BACKGROUND */
+
+.top-bar,
+#menu-main li a {
+    background: #2f8888;
+}
+
+#menu-main li a:hover {
+    color: #414141;
+}
+
+#menu-main .active li a {
+    background: #2f5353;
+}
 
 /* HOME PAGE + HEADER STYLING */
 
@@ -116,6 +136,21 @@ $latest-height: 150px;
 
 .title a {
     color: $text-color;
+}
+
+.top-bar-section ul li.active a {
+    background: #49c9c9 !important;
+}
+.tab-bar {
+    background: $content-bg;
+}
+
+.tab-bar .menu-icon span {
+    box-shadow: 0 0px 0 1px #414141,0 7px 0 1px #414141,0 14px 0 1px #414141;
+}
+
+.left-small {
+    border-right: none;
 }
 
 .title-mob img {
@@ -421,6 +456,7 @@ input.wpas-submit {
 
 select {
     border: none;
+    margin-bottom: 4px;
 }
 
 /* PAGINATION */
@@ -642,6 +678,7 @@ article {
 .email,
 .phone,
 .web,
+.linkedin,
 .contact-list {
     padding: 5px;
     text-align: center;
@@ -650,7 +687,7 @@ article {
 .email {
     background: tomato;
 }
-.phone {
+.phone, .linkedin {
     background: $text-color;
     color: $content-bg;
 }
@@ -688,6 +725,10 @@ article {
     color: $content-bg;
 }
 
+#contact img {
+    width: 100%;
+}
+
 /* SHARE LINKS */
 
 ul.share-links.columns {
@@ -701,7 +742,7 @@ ul.share-links.columns {
 
 .share-links.columns li {
    display: inline-block;
-   padding: .2em;
+   padding: .5em .2em;
    width: 30px;
    height: 30px;
    text-align: center;
@@ -730,7 +771,7 @@ ul.share-links.columns {
 }
 
 #map img {
-    width: 100%;
+        width: 100%;
 }
 
 
@@ -754,12 +795,14 @@ ul.share-links.columns {
         height: 130px;
     }
     .caption img {
-        margin-top: 55px !important;
+        width: 95% !important;
+        margin: 55px 0 0 0 !important;
     }
     .home #main {
+    margin-top: 2em !important;
     height: 250px !important;
     }
-    #search-results, .person-details, #contact {
+    #search-results, .person-details, #single-team .large-4, #contact {
         padding: 0;
     }
     #inner-content {
@@ -773,6 +816,9 @@ ul.share-links.columns {
     }
     .home-links {
         margin-bottom: 1em;
+    }
+    #map {
+    padding: 0;
     }
 }
 
