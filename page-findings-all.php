@@ -34,7 +34,7 @@ $args['fields'][] = array(
                   'allow_null' => "CHOOSE PROJECT",
                   'data_type' => 'CHAR',
                   'compare' => 'LIKE',
-                  'values' => array( '186' => 'Allostatic Load Over Time and Paid Work', '187' => 'Modelling Life Histories', '188' => 'Modelling Retirement Income', '189' => 'Paid Work and Health', '190' => 'Paid Work and Mental Health', '191' => 'Paid Work, Health and Cohort Change'));
+                  'values' => array(  '37' => 'Allostatic Load Over Time and Paid Work', '38' => 'Modelling Life Histories', '39' => 'Modelling Retirement Income', '40' => 'Paid Work and Health', '41' => 'Paid Work and Mental Health', '42' => 'Paid Work, Health and Cohort Change'));
 $args['fields'][] = array(
                   'type' => 'meta_key',
                   'meta_key' => 'resource_author',
@@ -42,7 +42,7 @@ $args['fields'][] = array(
                   'allow_null' => "CHOOSE AUTHOR",
                   'data_type' => 'CHAR',
                   'compare' => 'LIKE',
-                  'values' => array( '103' => 'Dr Laurie Corna', '170' => 'Chris Curry', '101' => 'Dr Giorgio Di Gessa', '105' => 'Professor Karen Glaser', '168' => 'Dr Peggy McDonough', '194' => 'Dr Loretta Platts', '104' => 'Dr Debora Price', '195' => 'Lawrence Sacco', '196' => 'Professor Amanda Sacker', '197' => 'Professor Robert Stewart', '102' => 'Rachel Stutchbury', '169' => 'Dr Diana Worts'));
+                  'values' => array( '63' => 'Dr Laurie Corna', '64' => 'Chris Curry', '65' => 'Dr Giorgio Di Gessa', '66' => 'Professor Karen Glaser', '67' => 'Dr Peggy McDonough', '71' => 'Dr Loretta Platts', '68' => 'Dr Debora Price', '72' => 'Lawrence Sacco', '73' => 'Professor Amanda Sacker', '74' => 'Professor Robert Stewart', '69' => 'Rachel Stutchbury', '70' => 'Dr Diana Worts'));
 $args['fields'][] = array('type' => 'search',
                           'placeholder' => 'Enter search terms here',
                           'title' => 'Search',
