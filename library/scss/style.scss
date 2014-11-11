@@ -126,7 +126,7 @@ h1, h2, h3, h4, h5, h6, * {
 /* HOME PAGE + HEADER STYLING */
 
 .home #main {
-    background: url('http://localhost/wherl/wp-content/themes/wherl2014/home.jpg');
+    background: url('http://wherl.ac.uk/wp-content/themes/wherl2014/library/images/home.jpg');
     background-size: cover;
     height: 450px;
     margin-bottom: 3em;
@@ -155,7 +155,7 @@ h1, h2, h3, h4, h5, h6, * {
 
 .title-mob img {
     width: 28px;
-    padding: 0 5px 5px 0;
+    padding: 0px 5px 5px 0px;
 }
 
 #inner-content {
@@ -168,7 +168,7 @@ h1, h2, h3, h4, h5, h6, * {
 }
 
 h1.title {
-    background: url('http://localhost/wherl/wp-content/uploads/2014/09/white-Wherl-Logo.png') no-repeat;
+    background: url('http://wherl.ac.uk/wp-content/themes/wherl2014/library/images/white-Wherl-Logo.png') no-repeat;
     background-size: contain;
     background-position: center center;
     width: 200px;
@@ -201,7 +201,7 @@ overflow: hidden;
     background: $theme-color;
     padding: .5em 1em 2em 1em;
     & h5 {
-    color: white;
+    color: $content-bg;
     text-align: center;
     text-transform: uppercase;
     }

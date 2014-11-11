@@ -40,7 +40,7 @@
                         
                         
                          <div>
-                             <h6><a href="<?php echo get_post_type_archive_link( 'finding' ); ?>"><?php echo get_the_title( $finding->ID ); ?></a></h6>
+                             <h6><a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Findings' ) ) ); ?>"><?php echo get_the_title( $finding->ID ); ?></a></h6>
                        </div>
     				
 <?php endforeach; ?>

@@ -356,6 +356,10 @@ function add_logout_link( $items, $args )
     return $items;
 }
 
+/**
+ * Change title box text for new submissions depending on custom post type
+*/
+
 function wpb_change_title_text( $title ){
      $screen = get_current_screen();
  
@@ -376,6 +380,10 @@ function wpb_change_title_text( $title ){
  
 add_filter( 'enter_title_here', 'wpb_change_title_text' );
 
+/**
+ * Redirect authors to the home page on login
+*/
+
 add_filter( 'login_redirect', 'login_redirect_example', 10, 3 );
  
 function login_redirect_example( $redirect_to, $request, $user ) {
@@ -389,6 +397,10 @@ function login_redirect_example( $redirect_to, $request, $user ) {
     }
     return;
 }
+
+/**
+ * Remove admin bar for all non-admins
+*/
  
 add_action('after_setup_theme', 'remove_admin_bar');
 
