@@ -369,7 +369,7 @@ if(function_exists("register_field_group"))
 			
 		),
 		'options' => array (
-			'position' => 'right',
+			'position' => 'side',
 			'layout' => 'default',
 			'hide_on_screen' => array (
 			),
