@@ -376,4 +376,26 @@ function wpb_change_title_text( $title ){
  
 add_filter( 'enter_title_here', 'wpb_change_title_text' );
 
+add_filter( 'login_redirect', 'login_redirect_example', 10, 3 );
+ 
+function login_redirect_example( $redirect_to, $request, $user ) {
+    global $user;
+    if ( isset( $user->roles ) && is_array( $user->roles ) ) {
+        if ( in_array( 'author', $user->roles ) ) {
+            return home_url();
+        } else {
+            return admin_url();
+            }
+    }
+    return;
+}
+ 
+add_action('after_setup_theme', 'remove_admin_bar');
+
+function remove_admin_bar() {
+if (!current_user_can('administrator') && !is_admin()) {
+  show_admin_bar(false);
+}
+}
+
 ?>
