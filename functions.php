@@ -231,82 +231,17 @@ function joints_comments($comment, $args, $depth) {
 } // don't remove this bracket!
 ?>
 <?php
-/*-----------------------------------------------------------------------------------*/
-/* Extends Author Profiles
-/*-----------------------------------------------------------------------------------*/
-
-
-function add_to_author_profile( $contactmethods ) {
-	
-	$contactmethods['work_title'] = 'Work Title';
-	$contactmethods['department_name'] = 'Department';
-	$contactmethods['twitter_profile'] = 'Twitter Profile URL';
-	$contactmethods['facebook_profile'] = 'Facebook Profile URL';
-	$contactmethods['linkedin_profile'] = 'Linkedin Profile URL';
-	
-	return $contactmethods;
-}
-add_filter( 'user_contactmethods', 'add_to_author_profile', 10, 1);
 
 
 /*-----------------------------------------------------------------------------------*/
-/* Re-writes author slug to profile for more appropriate URL
+/* Add excerpt support to pages
 /*-----------------------------------------------------------------------------------*/
-
-add_action('init', 'cng_author_base');
-function cng_author_base() {
-    global $wp_rewrite;
-    $author_slug = 'profile'; // change slug name
-    $wp_rewrite->author_base = $author_slug;
-}
 
 
 add_action('init', 'page_excerpt_init');
 function page_excerpt_init() {
 	add_post_type_support( 'page', 'excerpt' );
 }
-
-/**
- *	Add TinyMCE editor to the "Biographical Info" field in a user profile
- *  http://www.kevinleary.net/tinymce-wordpress-3-user-profile-pages/
- */
-function kpl_user_bio_visual_editor( $user ) {
-	// Requires WP 3.3+ and author level capabilities
-	if ( function_exists('wp_editor') && current_user_can('publish_posts') ):
-	?>
-	<script type="text/javascript">
-	(function($){ 
-		// Remove the textarea before displaying visual editor
-		$('#description').parents('tr').remove();
-	})(jQuery);
-	</script>
- 
-	<table class="form-table">
-		<tr>
-			<th><label for="description"><?php _e('Biographical Info'); ?></label></th>
-			<td>
-				<?php 
-				$description = get_user_meta( $user->ID, 'description', true);
-				wp_editor( $description, 'description' ); 
-				?>
-				<p class="description"><?php _e('Share a little biographical information to fill out your profile. This may be shown publicly.'); ?></p>
-			</td>
-		</tr>
-	</table>
-	<?php
-	endif;
-}
-add_action('show_user_profile', 'kpl_user_bio_visual_editor');
-add_action('edit_user_profile', 'kpl_user_bio_visual_editor');
- 
-/**
- * Remove textarea filters from description field
- */
-function kpl_user_bio_visual_editor_unfiltered() {
-	remove_all_filters('pre_user_description');
-}
-add_action('admin_init','kpl_user_bio_visual_editor_unfiltered');
-
 
 function add_video_wmode_transparent($html, $url, $attr) {
 
@@ -320,6 +255,7 @@ else
 add_filter( 'embed_oembed_html', 'add_video_wmode_transparent', 10, 3);
 
 add_filter( 'wp_nav_menu_items', 'add_logout_link', 10, 2);
+
 
 /* Gets edit link to current author's 'people' post_type content; which in this case is their profile. Call the function in the login link function to output this edit link to the navigation */
 
@@ -346,8 +282,14 @@ function add_logout_link( $items, $args )
     {
         if(is_user_logged_in())
         {
-            $items .= '<li><a href="'. wp_logout_url() .'">Log Out</a></li>';
-             $items .= '<li><a href="'. user_profile_link() .'">Edit Profile</a></li>';
+            $items .= '<li><a href="'. user_profile_link() .'">Edit Profile</a></li>';
+            $items .= '<li class="has-dropdown"><a href="#">Add New</a>';
+            $items .= '<ul class="dropdown"><li><a href="' . admin_url() . 'post-new.php">Blog Post</a></li>';
+            $items .= '<li><a href="' . admin_url() . 'post-new.php?post_type=news">News Item</a></li>';
+            $items .= '<li><a href="' . admin_url() . 'post-new.php?post_type=events">Event Listing</a></li>';
+            $items .= '<li><a href="' . admin_url() . 'post-new.php?post_type=finding">Finding</a></li></ul></li>';
+            $items .= '<li class="logout"><a href="'. wp_logout_url() .'">Log Out</a></li>';
+             
         } else {
             $items .= '<li><a href="'. wp_login_url() .'">Log In</a></li>';
         }
@@ -355,6 +297,8 @@ function add_logout_link( $items, $args )
 
     return $items;
 }
+
+                        
 
 /**
  * Change title box text for new submissions depending on custom post type
