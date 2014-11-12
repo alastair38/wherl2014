@@ -30,7 +30,7 @@ $postid = get_the_ID();
                             <h3 class="people-title">Blog Posts</h3>
                             <?php foreach( $blog_posts as $blog_post): ?>
 
-                           <div class="blog-article large-10 medium-8 columns">
+                           <div class="blog-article large-9 medium-8 columns">
                             <?php $permalink = get_permalink($blog_post->ID);?>
                             <?php $content = get_post_field('post_excerpt', $blog_post->ID);?>
                              <h3><a href="<?php echo $permalink;?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php echo get_the_title( $blog_post->ID ); ?></a></h3>
@@ -47,8 +47,13 @@ $postid = get_the_ID();
                             
                            
                             </div>
-                            <div class="archive-thumbnail large-2 medium-4 columns">
-       <?php echo get_the_post_thumbnail( $blog_post->ID ); ?>
+                            <div class="archive-thumbnail large-3 medium-4 columns">
+        <?php if ( has_post_thumbnail($blog_post->ID) ) {
+echo get_the_post_thumbnail($blog_post->ID, 'full' );  
+} else { ?>
+<img src="<?php echo get_template_directory_uri(); ?>/library/images/featured.png" alt="<?php the_title(); ?>" />
+<?php } ?>
+      
     </div>	
                         </div>
                        

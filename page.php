@@ -111,7 +111,7 @@ Template Name: Home
                         <div class="large-4 columns end">
                             <a href="<?php echo get_the_permalink( $blog->ID ); ?>"><div class="latest-blog">
                             <?php if ( has_post_thumbnail($blog->ID) ) {
-echo get_the_post_thumbnail($blog->ID );  
+echo get_the_post_thumbnail($blog->ID, 'full' );  
 } else { ?>
 <img src="<?php echo get_template_directory_uri(); ?>/library/images/featured.png" alt="<?php the_title(); ?>" />
 <?php } ?>
@@ -129,18 +129,31 @@ echo get_the_post_thumbnail($blog->ID );
 
 
                         $newsitems = get_posts(array(
-                            'post_type' => 'news',
+                            'post_type' => array('news', 'events'),
                             'posts_per_page' => 3
                         ));
 
                         ?>
 
                         <?php if( $newsitems ): ?>
-                        <h5>Latest News</h5>
+                        <h5>Latest News + Events</h5>
                         <?php foreach( $newsitems as $newsitem ): ?>
                        
                         <div class="large-4 columns end">
-                            <a href="<?php echo get_the_permalink( $newsitem->ID ); ?>"><div class="latest-news"><h6><?php echo get_the_title( $newsitem->ID ); ?></h6></div></a>
+                            <a href="<?php echo get_the_permalink( $newsitem->ID ); ?>"><div class="latest-news">
+                            
+                            <?php if( get_field('event_start', $newsitem->ID) ){
+                            $date = DateTime::createFromFormat('Ymd', get_field('event_start', $newsitem->ID));
+                            echo 'Event - ' . $date->format('d F Y');
+                            }     
+                            else {
+                                echo 'News';
+                            }
+                            ?>
+                            
+                            <h6><?php echo get_the_title( $newsitem->ID ); ?></h6>
+                            
+                            </div></a>
                        </div>
     				
 <?php endforeach; ?>
@@ -161,7 +174,7 @@ echo get_the_post_thumbnail($blog->ID );
    
    
     <h5>Gerontology Tweets</h5>
-	    <a class="twitter-timeline" href="https://twitter.com/DementiaMap/lists/dementiamappers" data-widget-id="527397641944985600" data-chrome="nofooter noheader transparent noborders" data-tweet-limit="10">Tweets from https://twitter.com/DementiaMap/lists/dementiamappers</a>
+	    <a class="twitter-timeline" href="https://twitter.com/DementiaMap/lists/dementiamappers" data-widget-id="527397641944985600" data-chrome="nofooter noheader transparent noborders" data-show-replies="false" data-tweet-limit="10">Tweets from https://twitter.com/DementiaMap/lists/dementiamappers</a>
             	
 	    
 	</div>	   

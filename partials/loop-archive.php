@@ -35,7 +35,7 @@
 	</div>	
     <div class="archive-thumbnail large-3 medium-4 columns">
         <?php if ( has_post_thumbnail() ) {
-the_post_thumbnail('medium' );  
+the_post_thumbnail('full' );  
 } else { ?>
 <img src="<?php echo get_template_directory_uri(); ?>/library/images/featured.png" alt="<?php the_title(); ?>" />
 <?php } ?>

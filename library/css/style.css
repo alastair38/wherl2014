@@ -1461,16 +1461,16 @@ h1.title {
   text-align: center;
   text-transform: uppercase; }
 
-.latest-blog {
-  text-transform: uppercase; }
-  .latest-blog img {
-    width: 50%;
-    height: 100px; }
-  .latest-blog h6 {
-    width: 40%;
-    position: absolute;
-    top: 0px;
-    left: 55%; }
+.latest-blog img {
+  width: 50%;
+  height: 100px; }
+.latest-blog h6 {
+  width: 50%;
+  text-transform: uppercase;
+  padding: 1em;
+  position: absolute;
+  top: 0px;
+  left: 50%; }
 
 .latest-finding:hover,
 .latest-news:hover,
@@ -1783,8 +1783,8 @@ article {
   background: #fff; }
 
 .archive-thumbnail {
-  margin: 0;
-  padding: 0;
+  margin: 0 0 1em 0;
+  padding: 0px;
   height: 200px; }
 
 .archive-thumbnail img,

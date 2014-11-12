@@ -3,7 +3,7 @@
 	<header class="article-header">	
 	<div class="blog-thumbnail columns">
         <?php if ( has_post_thumbnail() ) {
-the_post_thumbnail( ); 
+the_post_thumbnail('full' ); 
 if(get_post(get_post_thumbnail_id())->post_excerpt) {
 				echo '<div class="blog-thumbnail-caption">Photo copyright: ' . get_post(get_post_thumbnail_id())->post_excerpt . '</div>';
 } 

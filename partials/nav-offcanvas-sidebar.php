@@ -9,7 +9,7 @@
 				<!-- Title Area -->
 			
 					<li class="name">
-					<h1 class="title"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></h1>
+					<h1 class="title"><a href="<?php echo home_url(); ?>" title="This will take you home" rel="nofollow"><?php bloginfo('name'); ?></a></h1>
 				</li>
           
            
