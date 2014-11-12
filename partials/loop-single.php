@@ -2,12 +2,16 @@
 					
 	<header class="article-header">	
 	<div class="blog-thumbnail columns">
-        <?php the_post_thumbnail('full',array( 'class' => 'test' ) ); 
-        
+        <?php if ( has_post_thumbnail() ) {
+the_post_thumbnail( ); 
 if(get_post(get_post_thumbnail_id())->post_excerpt) {
-				echo '<div class="blog-thumbnail-caption">Photo copyright: ' . get_post(get_post_thumbnail_id())->post_excerpt . '</div>'; }
+				echo '<div class="blog-thumbnail-caption">Photo copyright: ' . get_post(get_post_thumbnail_id())->post_excerpt . '</div>';
+} 
+} else { ?>
+<img src="<?php echo get_template_directory_uri(); ?>/library/images/featured.png" alt="<?php the_title(); ?>" />
+<?php } ?>
 
-        ?>
+
     </div>			
 		<h1 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h1>
     </header> <!-- end article header -->

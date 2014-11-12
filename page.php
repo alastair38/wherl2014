@@ -109,7 +109,13 @@ Template Name: Home
                         <?php foreach( $blogs as $blog ): ?>
                        
                         <div class="large-4 columns end">
-                            <a href="<?php echo get_the_permalink( $blog->ID ); ?>"><div class="latest-blog"><?php echo get_the_post_thumbnail( $blog->ID ); ?><h6><?php echo get_the_title( $blog->ID ); ?></h6></div></a>
+                            <a href="<?php echo get_the_permalink( $blog->ID ); ?>"><div class="latest-blog">
+                            <?php if ( has_post_thumbnail($blog->ID) ) {
+echo get_the_post_thumbnail($blog->ID );  
+} else { ?>
+<img src="<?php echo get_template_directory_uri(); ?>/library/images/featured.png" alt="<?php the_title(); ?>" />
+<?php } ?>
+                            <h6><?php echo get_the_title( $blog->ID ); ?></h6></div></a>
                        </div>
     				
 <?php endforeach; ?>

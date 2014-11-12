@@ -486,6 +486,12 @@ nav.wp-prev-next ul {
     }
 }
 
+.people-logo img {
+    width: 40%; 
+    margin-left:30%;
+    margin-top: 20px;
+}
+
 label {
     font-size: 1.25em;
     text-align: center;
@@ -514,6 +520,10 @@ label {
 #people {
     border: 1px solid $page-bg;
     padding: 1em 0;
+}
+
+article .email {
+    margin-bottom: 1em;
 }
 
 .work-details {
@@ -760,6 +770,10 @@ ul.share-links.columns {
 }
 
 /* EVENTS */
+
+.event-content {
+    padding-bottom: 1em;
+}
 
 .event-date { 
     text-align:center; 

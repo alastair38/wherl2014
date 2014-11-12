@@ -1,6 +1,6 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
 	
-	<div class="blog-article large-10 medium-8 columns">					
+	<div class="blog-article large-9 medium-8 columns">					
 	
 	<header class="article-header">
 		<h3><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
@@ -33,8 +33,12 @@
     	<p class="tags"><?php the_tags('<span class="tags-title">' . __('Tags:', 'jointstheme') . '</span> ', ', ', ''); ?></p>
 	</footer> <!-- end article footer -->
 	</div>	
-    <div class="archive-thumbnail large-2 medium-4 columns">
-        <?php the_post_thumbnail('medium' ); ?>
+    <div class="archive-thumbnail large-3 medium-4 columns">
+        <?php if ( has_post_thumbnail() ) {
+the_post_thumbnail('medium' );  
+} else { ?>
+<img src="<?php echo get_template_directory_uri(); ?>/library/images/featured.png" alt="<?php the_title(); ?>" />
+<?php } ?>
     </div>			    
 		
 					

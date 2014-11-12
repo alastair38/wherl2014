@@ -45,7 +45,7 @@ Template Name: Main People Landing Page
           <div class="large-4 medium-6 small-12 columns end">
           <a href="<?php the_permalink();?>"><div class="people">
               <h5><?php the_title(); ?></h5>
-         <div class="people-excerpt"><?php the_excerpt(); ?></div>
+         <div class="people-logo"><?php the_post_thumbnail('full'); ?></div>
               </div></a>
          </div>      
       
