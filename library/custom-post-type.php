@@ -607,7 +607,7 @@ if(function_exists("register_field_group"))
 	));
 	register_field_group(array (
 		'id' => 'acf_event-dates',
-		'title' => 'Event Dates',
+		'title' => 'Date + Time',
 		'fields' => array (
 			array (
 				'key' => 'field_544797d80f512',
@@ -626,6 +626,19 @@ if(function_exists("register_field_group"))
 				'date_format' => 'yymmdd',
 				'display_format' => 'dd/mm/yy',
 				'first_day' => 1,
+			),
+            array (
+				'key' => 'field_5463c349b2f4c',
+				'label' => 'Event Time',
+				'name' => 'event_time',
+				'type' => 'text',
+				'instructions' => 'Enter start/end time of event (if available)',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'none',
+				'maxlength' => '',
 			),
 		),
 		'location' => array (

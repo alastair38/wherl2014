@@ -71,19 +71,19 @@ if ( is_user_logged_in() ) {;?>
                             
             
                             <?php if( get_field('email') ): ?>
-                                <div class="email"><i class="fi-mail"></i><a href="mailto:<?php the_field('email'); ?>">Email</a></div>
+                                <div class="email"><i class="fi-mail"></i><a href="mailto:<?php the_field('email'); ?>" target="_blank">Email</a></div>
                             <?php endif; ?>
                             <?php if( get_field('twitter') ): ?>
-                                <div class="twitter"><i class="fi-social-twitter"></i><a href="<?php the_field('twitter'); ?>">Twitter</a></div>
+                                <div class="twitter"><i class="fi-social-twitter"></i><a href="<?php the_field('twitter'); ?>" target="_blank">Twitter</a></div>
                             <?php endif; ?>
                             <?php if( get_field('linkedin') ): ?>
-                                <div class="linkedin"><i class="fi-social-linkedin"></i><a href="<?php the_field('linkedin'); ?>">LinkedIn</a></div>
+                                <div class="linkedin"><i class="fi-social-linkedin"></i><a href="<?php the_field('linkedin'); ?>" target="_blank">LinkedIn</a></div>
                             <?php endif; ?>
                             <?php if( get_field('phone_landline') ): ?>
                                 <div class="phone"><i class="fi-telephone"></i><?php the_field('phone_landline'); ?></div>
                             <?php endif; ?>
                             <?php if( get_field('website') ): ?>
-                                <div class="web"><i class="fi-web"></i><a href="<?php the_field('website'); ?>">Website</a></div>
+                                <div class="web"><i class="fi-web"></i><a href="<?php the_field('website'); ?>" target="_blank">Website</a></div>
                             <?php endif; ?>
                             
                                 

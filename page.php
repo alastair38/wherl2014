@@ -173,7 +173,13 @@ echo get_the_post_thumbnail($blog->ID, 'full' );
   
    
    
-    <h5>Gerontology Tweets</h5>
+    <h5>WHERL Tweets</h5>
+    <p><a class="twitter-follow-button"
+  href="https://twitter.com/WHERLage"
+  data-show-count="false"
+  data-lang="en">
+Follow @WHERLage
+</a></p>
 	    <a class="twitter-timeline" href="https://twitter.com/DementiaMap/lists/dementiamappers" data-widget-id="527397641944985600" data-chrome="nofooter noheader transparent noborders" data-show-replies="false" data-tweet-limit="10">Tweets from https://twitter.com/DementiaMap/lists/dementiamappers</a>
             	
 	    

@@ -34,16 +34,16 @@
                                     <?php endif; ?> 
                             
                             <?php if( get_field('event_email') ): ?>
-                                <div class="email"><i class="fi-mail"></i><a href="mailto:<?php the_field('event_email'); ?>">Email</a></div>
+                                <div class="email"><i class="fi-mail"></i><a href="mailto:<?php the_field('event_email'); ?>" target="_blank">Email</a></div>
                             <?php endif; ?>
                             <?php if( get_field('event_twitter') ): ?>
-                                <div class="twitter"><i class="fi-social-twitter"></i><a href="<?php the_field('event_twitter'); ?>">Twitter</a></div>
+                                <div class="twitter"><i class="fi-social-twitter"></i><a href="<?php the_field('event_twitter'); ?>" target="_blank">Twitter</a></div>
                             <?php endif; ?>
                             <?php if( get_field('event_phone') ): ?>
                                 <div class="phone"><i class="fi-telephone"></i><?php the_field('event_phone'); ?></div>
                             <?php endif; ?>
                             <?php if( get_field('event_website') ): ?>
-                                <div class="web"><i class="fi-web"></i><a href="<?php the_field('event_website'); ?>">Website</a></div>
+                                <div class="web"><i class="fi-web"></i><a href="<?php the_field('event_website'); ?>" target="_blank">Website</a></div>
                             <?php endif; ?>
                             
  <div class="single-thumbnail"><?php the_post_thumbnail('full'); ?>          </div>             
