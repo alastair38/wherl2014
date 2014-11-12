@@ -95,7 +95,7 @@ $text-color: #666;
 
 /* WHERL DIMENSION VARIABLES */
 
-$latest-height: 150px;
+$latest-height: 100px;
 
 
 h1, h2, h3, h4, h5, h6, * {
@@ -217,6 +217,7 @@ overflow: hidden;
     background: $content-bg;
     height: $latest-height;
     margin-bottom: 1em;
+    transition: 1s;
 }
 
 .latest-finding,
@@ -227,6 +228,7 @@ overflow: hidden;
 }
 
 .latest-blog {
+    text-transform: uppercase;
     & img {
         width: 50%;
         height: $latest-height;
@@ -234,10 +236,16 @@ overflow: hidden;
     & h6 {
         width: 40%;
         position: absolute;
-        top: 0;
+        top: 0px;
         left: 55%;
     }
 }
+
+.latest-finding:hover,
+.latest-news:hover,
+.latest-blog:hover {
+    background: rgba(255,255,255,0.75);
+ }
 
 /* SLIDER */
 

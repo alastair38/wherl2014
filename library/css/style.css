@@ -1451,8 +1451,9 @@ h1.title {
 .latest-blog,
 .latest-news {
   background: #fff;
-  height: 150px;
-  margin-bottom: 1em; }
+  height: 100px;
+  margin-bottom: 1em;
+  transition: 1s; }
 
 .latest-finding,
 .latest-news {
@@ -1460,14 +1461,21 @@ h1.title {
   text-align: center;
   text-transform: uppercase; }
 
-.latest-blog img {
-  width: 50%;
-  height: 150px; }
-.latest-blog h6 {
-  width: 40%;
-  position: absolute;
-  top: 0;
-  left: 55%; }
+.latest-blog {
+  text-transform: uppercase; }
+  .latest-blog img {
+    width: 50%;
+    height: 100px; }
+  .latest-blog h6 {
+    width: 40%;
+    position: absolute;
+    top: 0px;
+    left: 55%; }
+
+.latest-finding:hover,
+.latest-news:hover,
+.latest-blog:hover {
+  background: rgba(255, 255, 255, 0.75); }
 
 /* SLIDER */
 .slider {
