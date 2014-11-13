@@ -201,7 +201,7 @@
 .lt-ie9 .row .row { width: auto; max-width: none; min-width: 0; margin: 0 -15px; }
 .lt-ie9 .row .row.large-collapse { margin: 0; }
  
-.lt-ie9 .column, .lt-ie9 .columns { float: left; min-height: 1px; padding: 0 15px; position: relative; margin-top: 0px; margin-bottom: 10px; }
+.lt-ie9 .column, .lt-ie9 .columns { float: left; min-height: 1px; padding: 10px 15px; position: relative; margin-top: 0px; margin-bottom: 0px; }
 .lt-ie9 .column.large-centered, .columns.large-centered { float: none; margin: 0 auto; }
  
 .lt-ie9 [class*="column"] + [class*="column"]:last-child { float: right; }
@@ -284,7 +284,9 @@ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader( src='https://unsplas
 }
  
 
-.lt-ie9 h1.title-mob {display: none;}
+.lt-ie9 h1.title,
+.lt-ie9 h1.title-mob
+{display: none; }
 
 
  

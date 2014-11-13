@@ -62,6 +62,8 @@ you can add resource intensive styles.
 	// styles in large.scss
 	@import "large";
 
+
+    
 } // end of media query
 
 /*
@@ -331,28 +333,7 @@ overflow: hidden;
 }
 
 
-/* OPERA POSITIONAL FIXES FOR SLIDER + TOP MARGIN OF CONTENT */
 
-x:-o-prefocus, .slider {
-    height: 450px;
-}
-
-x:-o-prefocus, .two {
-    margin-top: 4.5em;
-}
-
-x:-o-prefocus, .three {
-    margin-top: 9em;
-}
-
-x:-o-prefocus, #inner-content {
-    margin-top: 3em;
-}
-
-
-x:-o-prefocus, .has-dropdown:hover > .dropdown {
-    overflow: visible !important;
-    }
 
 /* FOOTER */
 
@@ -806,6 +787,32 @@ ul.share-links.columns {
         width: 100%;
 }
 
+    /* OPERA POSITIONAL FIXES FOR SLIDER + TOP MARGIN OF CONTENT */
+
+x:-o-prefocus, .slider {
+    height: 450px;
+}
+
+x:-o-prefocus, .one {
+    margin-top: 10em;
+}
+
+x:-o-prefocus, .two {
+    margin-top: 3.5em;
+}
+
+x:-o-prefocus, .three {
+    margin-top: 8em;
+}
+
+x:-o-prefocus, #inner-content {
+    margin-top: 3em;
+}
+
+
+x:-o-prefocus, .has-dropdown:hover > .dropdown {
+    overflow: visible !important;
+    }
 
 @media only screen and (max-width: 40.062em) {
     .single-blog .columns {
@@ -852,6 +859,19 @@ ul.share-links.columns {
     #map {
     padding: 0;
     }
+    x:-o-prefocus, .one {
+    display: none;
+}
+
+x:-o-prefocus, .two {
+    margin-top: 2em;
+    height: 210px;
+    width: 100%;
+}
+
+x:-o-prefocus, .three {
+    display: none;
+}
 }
 
 /*

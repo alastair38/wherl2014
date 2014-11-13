@@ -20,7 +20,7 @@ Template Name: Home
 <div class='slider'>
      <div class='slide' >
         <div class='slidecontent'>
-            <div class="caption"><img src="<?php the_field('logo_image'); ?>"></div> 
+            <div class="caption one"><img src="<?php the_field('logo_image'); ?>"></div> 
         </div>
       
     </div>

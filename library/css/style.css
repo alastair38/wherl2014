@@ -1543,22 +1543,6 @@ h1.title {
 #slideposition ul li.indicator.active {
   background: lightblue; }
 
-/* OPERA POSITIONAL FIXES FOR SLIDER + TOP MARGIN OF CONTENT */
-x:-o-prefocus, .slider {
-  height: 450px; }
-
-x:-o-prefocus, .two {
-  margin-top: 4.5em; }
-
-x:-o-prefocus, .three {
-  margin-top: 9em; }
-
-x:-o-prefocus, #inner-content {
-  margin-top: 3em; }
-
-x:-o-prefocus, .has-dropdown:hover > .dropdown {
-  overflow: visible !important; }
-
 /* FOOTER */
 p.source-org.copyright {
   text-align: center; }
@@ -1926,6 +1910,25 @@ ul.share-links.columns {
 #map img {
   width: 100%; }
 
+/* OPERA POSITIONAL FIXES FOR SLIDER + TOP MARGIN OF CONTENT */
+x:-o-prefocus, .slider {
+  height: 450px; }
+
+x:-o-prefocus, .one {
+  margin-top: 10em; }
+
+x:-o-prefocus, .two {
+  margin-top: 3.5em; }
+
+x:-o-prefocus, .three {
+  margin-top: 8em; }
+
+x:-o-prefocus, #inner-content {
+  margin-top: 3em; }
+
+x:-o-prefocus, .has-dropdown:hover > .dropdown {
+  overflow: visible !important; }
+
 @media only screen and (max-width: 40.062em) {
   .single-blog .columns {
     padding-left: 0;
@@ -1969,7 +1972,18 @@ ul.share-links.columns {
     margin-bottom: 1em; }
 
   #map {
-    padding: 0; } }
+    padding: 0; }
+
+  x:-o-prefocus, .one {
+    display: none; }
+
+  x:-o-prefocus, .two {
+    margin-top: 2em;
+    height: 210px;
+    width: 100%; }
+
+  x:-o-prefocus, .three {
+    display: none; } }
 /*
 RETINA (2x RESOLUTION DEVICES)
 This applies to the retina iPhone (4s) and iPad (2,3) along with
