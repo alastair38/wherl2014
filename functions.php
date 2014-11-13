@@ -139,6 +139,7 @@ function joints_footer_links_fallback() {
 	/* you can put a default here if you like */
 }
 
+
 /*********************
 SIDEBARS
 *********************/

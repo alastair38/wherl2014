@@ -1455,9 +1455,13 @@ h1.title {
   margin-bottom: 1em;
   transition: 1s; }
 
-.latest-finding,
-.latest-news {
+.latest-finding {
   padding: 2em;
+  text-align: center;
+  text-transform: uppercase; }
+
+.latest-news {
+  padding: 1em 2em;
   text-align: center;
   text-transform: uppercase; }
 
@@ -1469,7 +1473,7 @@ h1.title {
   text-transform: uppercase;
   padding: 1em;
   position: absolute;
-  top: 0px;
+  top: 0;
   left: 50%; }
 
 .latest-finding:hover,
