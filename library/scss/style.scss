@@ -215,7 +215,7 @@ overflow: hidden;
 .latest-blog,
 .latest-news {
     background: $content-bg;
-    height: $latest-height;
+    min-height: $latest-height;
     margin-bottom: 1em;
     transition: 1s;
 }

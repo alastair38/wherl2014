@@ -1451,7 +1451,7 @@ h1.title {
 .latest-blog,
 .latest-news {
   background: #fff;
-  height: 100px;
+  min-height: 100px;
   margin-bottom: 1em;
   transition: 1s; }
 
