@@ -673,6 +673,17 @@ article {
     text-align: center;
 }
 
+#sidebar1 {
+    width: 100%;
+    background: #2f8888;
+    margin-top: 1em;
+    & input {
+        border: none;
+        background: $content-bg;
+        text-transform: uppercase;
+    }
+}
+
 /* SOCIAL ICONS + CONTACT */
 
 .twitter {
@@ -723,7 +734,7 @@ article {
 #contact .fi-mobile,
 #contact .fi-web,
 #contact .fi-social-linkedin {  
-    padding: 0 3px;
+    padding: 0px 3px;
 }
 
 #contact a {
@@ -750,7 +761,7 @@ ul.share-links.columns {
    padding: .5em .2em;
    width: 30px;
    height: 30px;
-   line-height: 0;
+   line-height: 0px;
    text-align: center;
    background: tomato;
    border-radius: 50%;

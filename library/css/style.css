@@ -1816,6 +1816,15 @@ article {
   margin: 15%;
   text-align: center; }
 
+#sidebar1 {
+  width: 100%;
+  background: #2f8888;
+  margin-top: 1em; }
+  #sidebar1 input {
+    border: none;
+    background: #fff;
+    text-transform: uppercase; }
+
 /* SOCIAL ICONS + CONTACT */
 .twitter {
   background: #2EBFEC; }
@@ -1860,7 +1869,7 @@ article {
 #contact .fi-mobile,
 #contact .fi-web,
 #contact .fi-social-linkedin {
-  padding: 0 3px; }
+  padding: 0px 3px; }
 
 #contact a {
   color: #fff; }
@@ -1881,7 +1890,7 @@ ul.share-links.columns {
   padding: .5em .2em;
   width: 30px;
   height: 30px;
-  line-height: 0;
+  line-height: 0px;
   text-align: center;
   background: tomato;
   border-radius: 50%; }
