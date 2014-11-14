@@ -3,9 +3,9 @@
 
   </header>
   <section class="entry-content">
-    <p><?php _e("Uh Oh. Something is missing. Try double checking things.", "jointstheme"); ?></p>
+    <?php _e("This maybe isn't what you were expecting. Never mind, welcome to the Wherl website and could we suggest some of our latest content (eyes left/down).", "jointstheme"); ?>
   </section>
   <footer class="article-footer">
-      <p><?php _e("This is the error message in the partials/missing-content.php template.", "jointstheme"); ?></p>
+      
   </footer>
 </article>

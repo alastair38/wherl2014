@@ -15,7 +15,11 @@ Template Name: Blog
                         
         <header class="article-header">
 		<h1 class="page-title"><?php wp_title(''); ?></h1>
+		
 	</header> <!-- end article header -->
+	
+	
+	
 <?php 
 $page_id  = get_queried_object_id();
 $content = get_post_field('post_content', $page_id);
@@ -40,7 +44,7 @@ echo '<p>' . $content . '</p>';?>
 					
 					    <?php else : ?>
 					    
-    						<?php get_template_part( 'partials/content', 'missing' ); ?>
+    						
 					
 					    <?php endif; ?>
 			

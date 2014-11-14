@@ -299,6 +299,28 @@ function add_logout_link( $items, $args )
     return $items;
 }
 
+function add_IEmenu_logout_link( $menuitems, $args )
+{
+    if($args->theme_location == 'footer-links')
+    {
+        if(is_user_logged_in())
+        {
+            $menuitems .= '<li><a href="'. user_profile_link() .'">Edit Profile</a></li>';
+            $menuitems .= '<li class="has-dropdown"><a href="#">Add New</a>';
+            $menuitems .= '<ul class="dropdown"><li><a href="' . admin_url() . 'post-new.php">Blog Post</a></li>';
+            $menuitems .= '<li><a href="' . admin_url() . 'post-new.php?post_type=news">News Item</a></li>';
+            $menuitems .= '<li><a href="' . admin_url() . 'post-new.php?post_type=events">Event Listing</a></li>';
+            $menuitems .= '<li><a href="' . admin_url() . 'post-new.php?post_type=finding">Finding</a></li></ul></li>';
+            $menuitems .= '<li class="logout"><a href="'. wp_logout_url() .'">Log Out</a></li>';
+             
+        } else {
+            $menuitems .= '<li><a href="'. wp_login_url() .'">Log In</a></li>';
+        }
+    }
+
+    return $menuitems;
+}
+
                         
 
 /**
@@ -354,5 +376,19 @@ if (!current_user_can('administrator') && !is_admin()) {
   show_admin_bar(false);
 }
 }
+
+function fields_in_feed($content) {  
+    if(is_feed()) {  
+        $post_id = get_the_ID();  
+        $output .= the_field("file_upload");  
+        $output .= the_field("file_uploadb");  
+        $output .= the_field("file_uploadc");
+        $output .= the_field("external_link");
+        $content = $output . '<p>' . $content . '</p>';  
+    }  
+    return $content;  
+}  
+add_filter('the_excerpt_rss','fields_in_feed');
+
 
 ?>

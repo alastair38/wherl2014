@@ -370,7 +370,7 @@ ul.team-projects {
 
 .project-members img.attachment-post-thumbnail.wp-post-image {
     width: 10%;
-    margin-left: -15px;
+    margin-left: -1em;
 }
 
 #project-team {
@@ -501,7 +501,7 @@ label {
     text-align: center;
     background: $theme-color;
     color: white;
-    margin: 15px 18px -15px 0px;
+    margin: 15px 18px -1em 0px;
 }
 
 .people-title {
@@ -619,7 +619,7 @@ article {
 }
 
 .archive-thumbnail {
-    margin:0 0 1em 0;
+    margin:0;
     padding: 0px;
      height: 200px;
 }
@@ -633,7 +633,7 @@ article {
 .blog-thumbnail img {
     width: 100%;
     height: 350px;
-    margin-top: -15px;
+    margin-top: -1em;
 }
 
 .single-thumbnail {
@@ -738,7 +738,7 @@ article {
 
 ul.share-links.columns {
     list-style-type: none;
-    margin-left: -15px;
+    margin-left: -1em;
 }
 
 #main ul.share-links.columns {

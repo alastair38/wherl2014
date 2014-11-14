@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+    <?php get_header(); ?>
 			
 			<div id="content" class="single-blog">
 
@@ -100,6 +100,8 @@
                              
 				
 						<?php endif; ?>
+       
+       <?php get_sidebar(); ?>
         
     </div>	
    		
