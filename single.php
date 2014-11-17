@@ -100,10 +100,11 @@
                              
 				
 						<?php endif; ?>
-       
+    
        <?php get_sidebar(); ?>
         
-    </div>	
+
+</div>	
    		
 
 				</div> <!-- end #inner-content -->

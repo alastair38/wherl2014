@@ -673,15 +673,36 @@ article {
     text-align: center;
 }
 
+/* SIGN UP FORM */
+
 #sidebar1 {
     width: 100%;
     background: #2f8888;
     margin-top: 1em;
-    & input {
+    & input[type="submit"] {
         border: none;
-        background: $content-bg;
+        background: $text-color;
+        color: $content-bg;
         text-transform: uppercase;
     }
+}
+
+
+.mc4wp-alert { 
+    background: #fff; 
+    padding: 10px; 
+    text-align: center;
+}
+
+form#mc4wp-form-1 p {
+    color: white; 
+    margin: 15px 0px;
+}
+
+form#mc4wp-form-1 h5 {
+    text-transform: uppercase; 
+    text-align: center; 
+    background: #fff;
 }
 
 /* SOCIAL ICONS + CONTACT */
@@ -870,10 +891,12 @@ x:-o-prefocus, .has-dropdown:hover > .dropdown {
     #map {
     padding: 0;
     }
+    #mc4wp-form-1 {
+        padding: 1em;
+    }
     x:-o-prefocus, .one {
     display: none;
 }
-
 x:-o-prefocus, .two {
     margin-top: 2em;
     height: 210px;
