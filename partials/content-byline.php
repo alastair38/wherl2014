@@ -1,6 +1,6 @@
 <div class="byline">
    
-    
+  
     <?php 
 
 						$persons = get_field('resource_author');
@@ -17,6 +17,10 @@
 							<?php endforeach; ?>
 							
 						<?php endif; ?>
+						
+						 
 						<span class="blog-date"><?php the_time('F j Y') ?></span>
+						
+						
 						 
 </div>	

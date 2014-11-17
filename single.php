@@ -23,29 +23,6 @@
     
 					 <div id="single-latest" class="large-4 small-12 columns" role="aside">
        
-    <?php 
-
-
-                        $findings = get_posts(array(
-                            'post_type' => 'finding',
-                            'posts_per_page' => 3
-                        ));
-
-                        ?>
-
-                        <?php if( $findings ): ?>
-                       
-                       <h4>Latest Findings</h4>
-                        <?php foreach( $findings as $finding ): ?>
-                        
-                        
-                         <div>
-                             <h6><a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Findings' ) ) ); ?>"><?php echo get_the_title( $finding->ID ); ?></a></h6>
-                       </div>
-    				
-<?php endforeach; ?>
-
-	<?php endif; ?>
 	
 	<?php 
 
@@ -58,7 +35,6 @@
                         ?>
 
                         <?php if( $newsitems ): ?>
-                        <hr>
                         <h4>Latest News</h4>
                         <?php foreach( $newsitems as $newsitem ): ?>
                        
@@ -73,6 +49,30 @@
                              
 				
 						<?php endif; ?>
+						
+						 <?php 
+
+
+                        $findings = get_posts(array(
+                            'post_type' => 'finding',
+                            'posts_per_page' => 3
+                        ));
+
+                        ?>
+
+                        <?php if( $findings ): ?>
+                       <hr>
+                       <h4>Latest Findings</h4>
+                        <?php foreach( $findings as $finding ): ?>
+                        
+                        
+                         <div>
+                             <h6><a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Findings' ) ) ); ?>"><?php echo get_the_title( $finding->ID ); ?></a></h6>
+                       </div>
+    				
+<?php endforeach; ?>
+
+	<?php endif; ?>
        
        <?php 
 

@@ -7,7 +7,7 @@
 
 .divascookies {
 	position: fixed;
-	top: 0;
+	bottom: 0;
 	width: 100%;
 	background: #313131;
 	color: #f9fafc;
@@ -17,14 +17,14 @@
 
 .divascookies > .divascookies-banner-container {
 	position: relative;
-	padding: 15px 20px;
+	padding: 10px 0 0 0;
 	overflow: hidden;
 	text-align: center;
 }
 
 .divascookies p.divascookies-banner-text {
 	position: relative;
-	line-height: 1.3em;
+	line-height: 1em;
 	font-size: 1em;
 	display: inline-block;
 	padding: 0 10px 0 0;

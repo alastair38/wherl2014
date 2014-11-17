@@ -28,8 +28,10 @@
 	
 		<?php the_excerpt(); ?>
 	</section> <!-- end article section -->
-						
+	
+	<!-- tags/categories here					
 	<footer class="article-footer">	
+   	    <p>This article is posted in: <?php the_category('<span class="tags-title">' . __('Tags:', 'jointstheme') . '</span> ', ', ', ''); ?></p>
     	<p class="tags"><?php the_tags('<span class="tags-title">' . __('Tags:', 'jointstheme') . '</span> ', ', ', ''); ?></p>
 	</footer> <!-- end article footer -->
 	</div>	
