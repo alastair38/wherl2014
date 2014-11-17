@@ -1774,11 +1774,11 @@ article {
   background: #fff; }
 
 .archive-thumbnail {
-  margin: 0;
+  width: 100%;
+  margin: 0px;
   padding: 0px;
-  height: 200px; }
+  min-height: 200px; }
 
-.archive-thumbnail img,
 .single-thumbnail img {
   width: 100%;
   height: 200px; }

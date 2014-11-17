@@ -151,7 +151,7 @@ if ( is_single() || is_front_page() ) {
 }
       
            // adding Divas Cookies JS scripts file in the footer
-    wp_enqueue_script( 'divascookies-js', get_template_directory_uri() . '/library/js/divascookies.js', array( 'jquery' ), '', true );
+    wp_enqueue_script( 'cookies-js', get_template_directory_uri() . '/library/js/cookies.js', array( 'jquery' ), '', true );
 
 
 
@@ -170,7 +170,7 @@ if ( is_single() || is_front_page() ) {
     wp_enqueue_style( 'joints-stylesheet', get_stylesheet_directory_uri() . '/library/css/style.css', array(), '', 'all' );
       
        // register Divas Cookies stylesheet
-    wp_enqueue_style( 'divascookies-stylesheet', get_stylesheet_directory_uri() . '/library/css/divascookies.css', array(), '', 'all' );
+    wp_enqueue_style( 'cookies-stylesheet', get_stylesheet_directory_uri() . '/library/css/cookies.css', array(), '', 'all' );
 
     // comment reply script for threaded comments
     if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
