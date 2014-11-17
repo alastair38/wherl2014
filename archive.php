@@ -8,12 +8,12 @@
 				
 					    <?php if (is_category()) { ?>
 						    <h1>
-							    <span><?php _e("Topic:", "jointstheme"); ?></span> <?php single_cat_title(); ?>
+							    <span><?php _e("Blog Articles Posted in:", "jointstheme"); ?></span> <?php single_cat_title(); ?>
 					    	</h1>
 					    
 					    <?php } elseif (is_tag()) { ?> 
 						    <h1>
-							    <span><?php _e("Tagged:", "jointstheme"); ?></span> <?php single_tag_title(); ?>
+							    <span><?php _e("Blog Articles Tagged:", "jointstheme"); ?></span> <?php single_tag_title(); ?>
 						    </h1>
 					    
 					    <?php } elseif (is_author()) { 
@@ -60,13 +60,12 @@
 					
 					    <?php else : ?>
 					
-    						<?php get_template_part( 'partials/content', 'missing' ); ?>
 					
 					    <?php endif; ?>
 			
     				</div> <!-- end #main -->
     
-	    			<?php get_sidebar(); ?>
+	   
                 
                 </div> <!-- end #inner-content -->
                 

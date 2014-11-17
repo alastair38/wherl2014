@@ -15,7 +15,7 @@ if(get_post(get_post_thumbnail_id())->post_excerpt) {
     </div>			
 		<h1 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h1>
 		
-<!-- categories here	
+
    <p class="categories">This article is posted in: <?php the_category('<span class="tags-title">' . __('Categories:', 'jointstheme') . '</span> ', ', ', ''); ?></p> 
     </header> <!-- end article header -->
 	 <?php get_template_part( 'partials/content', 'byline' ); ?>
@@ -25,8 +25,8 @@ if(get_post(get_post_thumbnail_id())->post_excerpt) {
 	
 		<?php the_content(); ?>
 	
-	 <!-- tags here
-		<p class="tags"><?php the_tags('<span class="tags-title">' . __('Tags:', 'jointstheme') . '</span> ', ', ', ''); ?></p> -->
+	 
+		<p class="tags"><?php the_tags('<span class="tags-title">' . __('Tags:', 'jointstheme') . '</span> ', ', ', ''); ?></p>
 	    
 	</section> <!-- end article section -->
     <?php get_template_part( 'partials/content', 'share' ); ?>	

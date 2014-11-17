@@ -487,6 +487,10 @@ nav.wp-prev-next ul {
     margin-top: 20px;
 }
 
+#people .archive-thumbnail {
+    margin-bottom: 1em;
+}
+
 label {
     font-size: 1.25em;
     text-align: center;
@@ -587,7 +591,7 @@ article {
 
 .blog-byline {
     display: inline-block;
-    padding: 5px 0px;
+    padding: 5px 0;
 }
 
 .blog #content,
@@ -666,6 +670,10 @@ article {
     text-transform: uppercase;
 }
 
+p.categories {
+    text-align: center;
+}
+
 #blog-share ul {
     display: inline-block; 
     width: 70%; 
@@ -696,7 +704,7 @@ article {
 
 form#mc4wp-form-1 p {
     color: white; 
-    margin: 15px 0px;
+    margin: 15px 0;
 }
 
 form#mc4wp-form-1 h5 {

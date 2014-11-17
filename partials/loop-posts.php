@@ -41,13 +41,13 @@ $postid = get_the_ID();
     
     <section class="blog-content clearfix" itemprop="articleBody">
 	
-		<?php echo $content;?>
+		<?php echo $content; ?>
 	</section> <!-- end article section -->                    
                         
                             
                            
                             </div>
-                            <div class="archive-thumbnail large-3 medium-4 columns">
+                            <div class="archive-thumbnail large-3 medium-4 columns end">
         <?php if ( has_post_thumbnail($blog_post->ID) ) {
 echo get_the_post_thumbnail($blog_post->ID, 'full' );  
 } else { ?>
@@ -55,11 +55,11 @@ echo get_the_post_thumbnail($blog_post->ID, 'full' );
 <?php } ?>
       
     </div>	
-                        </div>
+                       
                        
 
                         <?php endforeach; ?>
-                       
+              </div>          
                         <?php endif; ?>
                         
                         <?php wp_reset_postdata();?>

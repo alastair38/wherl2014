@@ -1659,6 +1659,9 @@ nav.wp-prev-next ul {
   margin-left: 30%;
   margin-top: 20px; }
 
+#people .archive-thumbnail {
+  margin-bottom: 1em; }
+
 label {
   font-size: 1.25em;
   text-align: center;
@@ -1744,7 +1747,7 @@ article {
 /*BLOG POSTS + BLOG ARCHIVE */
 .blog-byline {
   display: inline-block;
-  padding: 5px 0px; }
+  padding: 5px 0; }
 
 .blog #content,
 .events,
@@ -1810,6 +1813,9 @@ article {
   padding: 10px;
   text-transform: uppercase; }
 
+p.categories {
+  text-align: center; }
+
 #blog-share ul {
   display: inline-block;
   width: 70%;
@@ -1834,7 +1840,7 @@ article {
 
 form#mc4wp-form-1 p {
   color: white;
-  margin: 15px 0px; }
+  margin: 15px 0; }
 
 form#mc4wp-form-1 h5 {
   text-transform: uppercase;
