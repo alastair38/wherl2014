@@ -14,7 +14,9 @@ get_header(); ?>
 				    
 				<h1 class="peopletitle"><?php the_title(); ?></h1>
 				
-				<?php the_excerpt();?>
+				<?php the_post_thumbnail('full'); ?>
+				
+				<p id="team-excerpt"><?php the_excerpt();?></p>
 				
 				<?php endwhile; else : ?>
 

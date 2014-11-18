@@ -377,6 +377,18 @@ ul.team-projects {
     padding-bottom: 2em;
 }
 
+/* SINGLE TEAM */
+
+.single-team img {
+    width: 12%; 
+    position:absolute; 
+    top: 0; 
+    left: 0;
+}
+
+#team-excerpt {
+    margin-top: 3em;
+}
 
 /* FINDINGS + SEARCH PAGE */
 
@@ -681,6 +693,14 @@ p.categories {
     display: inline-block; 
     width: 70%; 
     margin: 15%; 
+    text-align: center;
+}
+
+#edit-link {
+    display: inline-block;
+    width: 30%;
+    margin-left: 35%;
+    background: #f2f2f2;
     text-align: center;
 }
 

@@ -22,7 +22,7 @@ if(get_post(get_post_thumbnail_id())->post_excerpt) {
         
        		
     <section class="entry-content clearfix" itemprop="articleBody">
-	
+	<p id="edit-link"><?php edit_post_link('Edit Article'); ?></p>
 		<?php the_content(); ?>
 	
 	 
@@ -31,6 +31,7 @@ if(get_post(get_post_thumbnail_id())->post_excerpt) {
 	</section> <!-- end article section -->
     <?php get_template_part( 'partials/content', 'share' ); ?>	
 	<footer class="article-footer">
+	
 	
 		</footer> <!-- end article footer -->
 									

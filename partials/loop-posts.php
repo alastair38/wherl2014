@@ -32,7 +32,7 @@ $postid = get_the_ID();
 
                            <div class="blog-article large-9 medium-8 columns">
                             <?php $permalink = get_permalink($blog_post->ID);?>
-                            <?php $content = get_post_field('post_excerpt', $blog_post->ID);?>
+                            <?php $content = get_post_field('post_content', $blog_post->ID);?>
                              <h3><a href="<?php echo $permalink;?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php echo get_the_title( $blog_post->ID ); ?></a></h3>
 
 <span class="blog-byline">
@@ -41,7 +41,7 @@ $postid = get_the_ID();
     
     <section class="blog-content clearfix" itemprop="articleBody">
 	
-		<?php echo $content; ?>
+		<?php echo wp_trim_words($content, 55, '<a href="'. $permalink .'"> ...Read More &raquo;</a>'); ?>
 	</section> <!-- end article section -->                    
                         
                             
