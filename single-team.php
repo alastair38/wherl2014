@@ -14,7 +14,7 @@ get_header(); ?>
 				    
 				<h1 class="peopletitle"><?php the_title(); ?></h1>
 				
-				<?php the_post_thumbnail('full'); ?>
+				<?php the_post_thumbnail('full', array( 'class' => 'team-logo' )); ?>
 				
 				<p id="team-excerpt"><?php the_excerpt();?></p>
 				

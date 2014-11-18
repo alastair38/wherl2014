@@ -1576,7 +1576,7 @@ ul.team-projects {
   padding-bottom: 2em; }
 
 /* SINGLE TEAM */
-.single-team img {
+img.team-logo {
   width: 12%;
   position: absolute;
   top: 0;
