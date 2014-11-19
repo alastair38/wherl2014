@@ -61,21 +61,21 @@ function clg_team() {
 	register_post_type( 'team', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
 	 	// let's now add all the options for this post type
 		array('labels' => array(
-			'name' => __('Academic Team', 'jointstheme'), /* This is the Title of the Group */
-			'singular_name' => __('Academic Team', 'jointstheme'), /* This is the individual type */
-			'all_items' => __('All Academic Teams', 'jointstheme'), /* the all items menu item */
-			'add_new' => __('Add New Academic Team', 'jointstheme'), /* The add new menu item */
-			'add_new_item' => __('Add New Academic Team', 'jointstheme'), /* Add New Display Title */
+			'name' => __('Team', 'jointstheme'), /* This is the Title of the Group */
+			'singular_name' => __('Team', 'jointstheme'), /* This is the individual type */
+			'all_items' => __('All Teams', 'jointstheme'), /* the all items menu item */
+			'add_new' => __('Add New Team', 'jointstheme'), /* The add new menu item */
+			'add_new_item' => __('Add New Team', 'jointstheme'), /* Add New Display Title */
 			'edit' => __( 'Edit', 'jointstheme' ), /* Edit Dialog */
-			'edit_item' => __('Edit Academic Team', 'jointstheme'), /* Edit Display Title */
-			'new_item' => __('New Academic Team', 'jointstheme'), /* New Display Title */
-			'view_item' => __('View Academic Team', 'jointstheme'), /* View Display Title */
-			'search_items' => __('Search Academic Teams', 'jointstheme'), /* Search Custom Type Title */
+			'edit_item' => __('Edit Team', 'jointstheme'), /* Edit Display Title */
+			'new_item' => __('New Team', 'jointstheme'), /* New Display Title */
+			'view_item' => __('View Team', 'jointstheme'), /* View Display Title */
+			'search_items' => __('Search Teams', 'jointstheme'), /* Search Custom Type Title */
 			'not_found' =>  __('Nothing found in the Database.', 'jointstheme'), /* This displays if there are no entries yet */
 			'not_found_in_trash' => __('Nothing found in Trash', 'jointstheme'), /* This displays if there is nothing in the trash */
 			'parent_item_colon' => ''
 			), /* end of arrays */
-			'description' => __( 'Wherl Academic Team', 'jointstheme' ), /* Custom Type Description */
+			'description' => __( 'Wherl Team', 'jointstheme' ), /* Custom Type Description */
 			'public' => true,
 			'publicly_queryable' => true,
 			'exclude_from_search' => false,
@@ -323,7 +323,7 @@ if(function_exists("register_field_group"))
 				'type' => 'text',
                 'instructions' => '',
 				'default_value' => '',
-				'placeholder' => 'Enter your website url in this format http://yourwebsite.com',
+				'placeholder' => 'Enter your website url in this format http://yourwebsite.com OR http://www.yourwebsite.com',
 				'prepend' => '',
 				'append' => '',
 				'min' => '',
@@ -363,14 +363,14 @@ if(function_exists("register_field_group"))
 					'param' => 'post_type',
 					'operator' => '==',
 					'value' => 'people',
-					'order_no' => 0,
-					'group_no' => 0,
+					'order_no' => 2,
+					'group_no' => 2,
 				),
 			),
 			
 		),
 		'options' => array (
-			'position' => 'side',
+			'position' => 'acf_after_title',
 			'layout' => 'default',
 			'hide_on_screen' => array (
 			),
@@ -380,7 +380,7 @@ if(function_exists("register_field_group"))
 	
 	register_field_group(array (
 		'id' => 'acf_people-details',
-		'title' => 'Person Details',
+		'title' => 'Person Details (these name and title fields are for database purposes and do not appear on the site. To change how your name appears, please update the text field at the top of the page - directly under "Edit Person")',
 		'fields' => array (
 			array (
 				'key' => 'field_537a1dbbe3aa7',
@@ -425,7 +425,7 @@ if(function_exists("register_field_group"))
 			),
             array (
 				'key' => 'field_543692ae64146',
-				'label' => 'Project Role',
+				'label' => 'Wherl Project Role',
 				'name' => 'work_position',
 				'type' => 'text',
 				'required' => 1,
@@ -452,13 +452,13 @@ if(function_exists("register_field_group"))
 					'param' => 'post_type',
 					'operator' => '==',
 					'value' => 'people',
-					'order_no' => 0,
-					'group_no' => 0,
+					'order_no' => 1,
+					'group_no' => 1,
 				),
 			),
 		),
 		'options' => array (
-			'position' => 'side',
+			'position' => 'acf_after_title',
 			'layout' => 'default',
 			'hide_on_screen' => array (
 			),
@@ -506,17 +506,6 @@ if(function_exists("register_field_group"))
 		'id' => 'acf_contact',
 		'title' => 'Details + Contact',
 		'fields' => array (
-			array (
-				'key' => 'field_544799529417c',
-				'label' => 'Address',
-				'name' => 'event_address',
-				'type' => 'textarea',
-				'default_value' => '',
-				'placeholder' => 'Enter a contact address here (for events listings this should be the event address itself; You can also add a map to events by using the location function at the bottom of the events submission page)',
-				'maxlength' => '',
-				'rows' => '',
-				'formatting' => 'none',
-			),
 			array (
 				'key' => 'field_544799889417d',
 				'label' => 'Contact Name',
@@ -747,7 +736,7 @@ if(function_exists("register_field_group"))
 				'label' => 'Source Link',
 				'name' => 'external_link',
 				'type' => 'text',
-				'instructions' => '',
+				'instructions' => 'You can use this to link to another website or a file you have uploaded elsewhere',
 				'default_value' => '',
 				'placeholder' => 'Paste the URL of an external source you wish to link to',
 				'prepend' => '',
@@ -775,6 +764,15 @@ if(function_exists("register_field_group"))
 					'group_no' => 1,
 				),
 			),
+            array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'news',
+					'order_no' => 0,
+					'group_no' => 1,
+				),
+			),
 		),
 		'options' => array (
 			'position' => 'side',
@@ -788,6 +786,17 @@ if(function_exists("register_field_group"))
 		'id' => 'acf_location',
 		'title' => 'Location',
 		'fields' => array (
+            array (
+				'key' => 'field_544799529417c',
+				'label' => 'Address',
+				'name' => 'event_address',
+				'type' => 'textarea',
+				'default_value' => '',
+				'placeholder' => 'Enter the event address itself; You can also add a map to events by using the location function below)',
+				'maxlength' => '',
+				'rows' => '',
+				'formatting' => 'none',
+			),
 			array (
 				'key' => 'field_544775c4bdf17',
 				'label' => 'Event Map',
@@ -990,10 +999,10 @@ if(function_exists("register_field_group"))
 		'fields' => array (
 			array (
 				'key' => 'field_54463798158e4',
-				'label' => 'Academic Group',
+				'label' => 'Wherl Group',
 				'name' => 'academic_group',
 				'type' => 'relationship',
-				'instructions' => 'Which academic team are you a member of?',
+				'instructions' => 'Which Wherl team are you a member of?',
 				'return_format' => 'object',
 				'post_type' => array (
 					0 => 'team',
@@ -1017,8 +1026,8 @@ if(function_exists("register_field_group"))
 					'param' => 'post_type',
 					'operator' => '==',
 					'value' => 'people',
-					'order_no' => 0,
-					'group_no' => 0,
+					'order_no' => 3,
+					'group_no' => 3,
 				),
 			),
 		),
@@ -1039,7 +1048,7 @@ if(function_exists("register_field_group"))
 				'label' => 'Work Project',
 				'name' => 'work_project',
 				'type' => 'relationship',
-				'instructions' => 'Associate this content with a Wherl work package(s)',
+				'instructions' => 'Assign to a Wherl work package or packages, if relevant',
 				'return_format' => 'object',
 				'post_type' => array (
 					0 => 'projects',
@@ -1063,8 +1072,8 @@ if(function_exists("register_field_group"))
 					'param' => 'post_type',
 					'operator' => '==',
 					'value' => 'people',
-					'order_no' => 0,
-					'group_no' => 0,
+					'order_no' => 4,
+					'group_no' => 4,
 				),
 			),
 			array (
