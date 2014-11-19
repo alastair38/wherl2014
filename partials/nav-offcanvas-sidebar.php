@@ -1,4 +1,4 @@
-<div class="large-12 columns show-for-medium-up">
+<div class="large-12 columns show-for-large-up">
 	<div class="fixed">
 		
 		<!-- If you want to use the more traditional "fixed" navigation.
@@ -41,7 +41,7 @@
 	</div>
 </div>
 
-<div class="large-12 columns show-for-small-only">
+<div class="large-12 columns show-for-medium-down">
 	<div class="contain-to-grid fixed">
 		<nav class="tab-bar">
 			<section class="middle tab-bar-section">
@@ -55,7 +55,7 @@
 	</div>
 </div>
 						
-<aside class="left-off-canvas-menu show-for-small-only">
+<aside class="left-off-canvas-menu show-for-medium-down">
 	<ul class="off-canvas-list">
 		<li><label>Navigation</label></li>
 			<?php joints_main_nav(); ?>    
