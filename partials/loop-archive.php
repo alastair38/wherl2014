@@ -31,8 +31,8 @@
 	
 					
 	<footer class="article-footer">	
-        <p>This article is posted in: <?php the_category('<span class="tags-title">' . __('Tags:', 'jointstheme') . '</span> ', ', ', ''); ?></p>
-   	    <?php the_tags('<span class="tags-title">' . __('Tags:', 'jointstheme') . '</span> ', ', ', ''); ?>
+        <p>This article is posted in: <?php the_category(', '); ?></p>
+   	    <?php the_tags(); ?>
 	</footer> <!-- end article footer -->
 	</div>	
     <div class="archive-thumbnail large-3 medium-4 columns">
