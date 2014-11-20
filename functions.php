@@ -391,4 +391,81 @@ function fields_in_feed($content) {
 add_filter('the_excerpt_rss','fields_in_feed');
 
 
+
+// Add help text to right of screen in a metabox
+function wherlfinding_metabox_top_right() {
+    add_meta_box( 'after-title-help', 'HELP', 'wherlfinding_top_right_help_metabox_content', 'finding', 'side', 'high' );
+}
+// callback function to populate metabox
+function wherlfinding_top_right_help_metabox_content() { ?>
+    <?php add_thickbox(); ?>
+
+    <p><a href="https://qsnapnet.com/snaps/37aw0l4lds57mn2?TB_iframe=true&width=600&height=550" class="thickbox">Adding a finding!</a></p>
+     
+     <a href="mailto:alastair@alastaircox.com" target="_blank">Still stuck? Email Alastair</a>
+
+<?php }
+add_action( 'add_meta_boxes', 'wherlfinding_metabox_top_right' );
+
+// Add help text to right of new news item screen in a metabox
+function wherlnews_metabox_top_right() {
+    add_meta_box( 'after-title-help', 'HELP', 'wherlnews_top_right_help_metabox_content', 'news', 'side', 'high' );
+}
+// callback function to populate metabox
+function wherlnews_top_right_help_metabox_content() { ?>
+    <?php add_thickbox(); ?>
+
+        <p><a href="https://qsnapnet.com/snaps/l687g8nvbgw1xlx?TB_iframe=true&width=600&height=550" class="thickbox">Adding a news item!</a></p>
+
+        <a href="mailto:alastair@alastaircox.com" target="_blank">Still stuck? Email Alastair</a>
+        
+<?php }
+add_action( 'add_meta_boxes', 'wherlnews_metabox_top_right' );
+
+
+// Add help text to right of new event screen in a metabox
+function wherlevent_metabox_top_right() {
+    add_meta_box( 'after-title-help', 'HELP', 'wherlevent_top_right_help_metabox_content', 'events', 'side', 'high' );
+}
+// callback function to populate metabox
+function wherlevent_top_right_help_metabox_content() { ?>
+    <?php add_thickbox(); ?>
+
+     <p><a href="https://qsnapnet.com/snaps/82dx0vsjrtivygb?TB_iframe=true&width=600&height=550" class="thickbox">Adding an event!</a></p>
+     
+     <a href="mailto:alastair@alastaircox.com" target="_blank">Still stuck? Email Alastair</a>
+
+<?php }
+add_action( 'add_meta_boxes', 'wherlevent_metabox_top_right' );
+
+// Add help text to right of new post screen in a metabox
+function wherlpost_metabox_top_right() {
+    add_meta_box( 'after-title-help', 'HELP', 'wherlpost_top_right_help_metabox_content', 'post', 'side', 'high' );
+}
+// callback function to populate metabox
+function wherlpost_top_right_help_metabox_content() { ?>
+    <?php add_thickbox(); ?>
+
+    <p><a href="https://qsnapnet.com/snaps/hh518ucujuivn29?TB_iframe=true&width=900&height=550" class="thickbox">Adding a blog post!</a></p>
+     
+     <a href="mailto:alastair@alastaircox.com" target="_blank">Still stuck? Email Alastair</a>
+
+<?php }
+add_action( 'add_meta_boxes', 'wherlpost_metabox_top_right' );
+
+// Add help text to right of edit person screen in a metabox
+function wherlperson_metabox_top_right() {
+    add_meta_box( 'after-title-help', 'HELP', 'wherlperson_top_right_help_metabox_content', 'people', 'side', 'high' );
+}
+// callback function to populate metabox
+function wherlperson_top_right_help_metabox_content() { ?>
+    <?php add_thickbox(); ?>
+
+        <p><a href="https://qsnapnet.com/snaps/zvjlizxu4u6jemi?TB_iframe=true&width=900&height=550" class="thickbox">Editing your profile!</a></p>
+     
+     <a href="mailto:alastair@alastaircox.com" target="_blank">Still stuck? Email Alastair</a>
+
+<?php }
+add_action( 'add_meta_boxes', 'wherlperson_metabox_top_right' );
+
 ?>

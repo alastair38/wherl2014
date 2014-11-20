@@ -40,7 +40,6 @@ $postid = get_the_ID();
 	<?php the_time('F j Y') ?></span>   
     
     <section class="blog-content clearfix" itemprop="articleBody">
-	
 		<?php echo wp_trim_words($content, 55, '<a href="'. $permalink .'"> ...Read More &raquo;</a>'); ?>
 	</section> <!-- end article section -->                    
                         

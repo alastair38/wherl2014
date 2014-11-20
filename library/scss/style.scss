@@ -288,10 +288,11 @@ overflow: hidden;
      margin: auto;
      right: 0;
      width: 90%;
-     & img {
-        width: 50%;
-        margin: 5% 25%;
     }
+
+.one img {
+        width: 40%;
+        margin: 7% 30%;
 }
 
 .two,
@@ -897,8 +898,8 @@ x:-o-prefocus, .has-dropdown:hover > .dropdown {
         height: 130px;
     }
     .caption img {
-        width: 95% !important;
-        margin: 55px 0 0 0 !important;
+        width: 80% !important;
+        margin: 55px 10% 0 10% !important;
     }
     .home #main {
     margin-top: 2em !important;
