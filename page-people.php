@@ -16,7 +16,7 @@ Template Name: Main People Landing Page
 					    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					    
 					    <header class="article-header">
-		<h1 class="page-title"><?php the_title(); ?></h1>
+		<h1 class="page-title"><?php echo get_the_title() . " - Academic Teams"; ?></h1>
 	</header> <!-- end article header -->
 					
 					  
@@ -29,16 +29,44 @@ Template Name: Main People Landing Page
 					    <?php endif; ?>
 			
     				
-    				
-    				
        <?php
-
-   $args = array('post_type' => 'team', 'orderby'    => 'date',  'order'      => 'ASC');
+   
+   $args = array('post_type' => 'team', 'orderby'    => 'date',  'order'      => 'ASC', 'post__not_in' => array( 49, 51 ));
    $teams = new WP_Query($args);
 
    if($teams->have_posts()) : 
       while($teams->have_posts()) : 
          $teams->the_post();
+?> 
+ 
+           
+          <div class="large-4 medium-6 small-12 columns end">
+          <a href="<?php the_permalink();?>"><div class="people">
+              <h5><?php the_title(); ?></h5>
+         <div class="people-logo"><?php the_post_thumbnail('full'); ?></div>
+              </div></a>
+         </div>      
+      
+<?php
+      endwhile;
+
+   endif;
+    
+wp_reset_query(); 
+
+?>           
+   <header class="article-header">
+		<h1 class="large-12 columns page-title"><?php echo get_the_title() . " - Project Partners"; ?></h1>
+	</header>
+ 
+      <?php
+   
+   $args = array('post_type' => 'team', 'orderby'    => 'date',  'order'      => 'ASC', 'post__in' => array( 49, 51 ));
+   $partners = new WP_Query($args);
+
+   if($partners->have_posts()) : 
+      while($partners->have_posts()) : 
+         $partners->the_post();
 ?> 
  
            

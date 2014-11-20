@@ -180,7 +180,7 @@ echo get_the_post_thumbnail($blog->ID, 'full' );
   data-lang="en">
 Follow @WHERLage
 </a></p>
-	    <a class="twitter-timeline" href="https://twitter.com/DementiaMap/lists/dementiamappers" data-widget-id="527397641944985600" data-chrome="nofooter noheader transparent noborders" data-show-replies="false" data-tweet-limit="10">Tweets from https://twitter.com/DementiaMap/lists/dementiamappers</a>
+	    <a class="twitter-timeline" href="https://twitter.com/WHERLage/lists/wherl-tweets" data-widget-id="535469391476195329" data-chrome="nofooter noheader transparent noborders" data-show-replies="false" data-tweet-limit="10">Tweets from https://twitter.com/WHERLage/lists/wherl-tweets</a>
             	
 	    
 	</div>	   
