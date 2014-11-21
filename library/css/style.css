@@ -1544,6 +1544,19 @@ h1.title {
 #slideposition ul li.indicator.active {
   background: lightblue; }
 
+.funders {
+  position: absolute;
+  top: 200px;
+  width: 30%;
+  margin-left: 35%; }
+
+.funder-one {
+  width: 28%; }
+
+.funder-two {
+  width: 54%;
+  margin-left: 18%; }
+
 /* FOOTER */
 p.source-org.copyright {
   text-align: center; }
@@ -1787,10 +1800,10 @@ article {
 .archive-thumbnail {
   margin: 0;
   padding: 0;
-  height: 220px; }
+  min-height: 250px; }
 
 .archive-thumbnail img {
-  min-height: 220px;
+  min-height: 250px;
   width: 100%; }
 
 .single-thumbnail img {
@@ -1835,6 +1848,9 @@ p.categories {
   width: 70%;
   margin: 15%;
   text-align: center; }
+
+.blog-content {
+  line-height: 1.5em; }
 
 #edit-link {
   display: inline-block;

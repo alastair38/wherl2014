@@ -32,6 +32,7 @@ Template Name: Home
     <div class='slide'>
         <div class='slidecontent'>
              <div class="caption three"><?php the_field('slide_two'); ?></div> 
+             <div class="funders"><img class="funder-one" src="<?php the_field('funder_one'); ?>"><img class="funder-two" src="<?php the_field('funder_two'); ?>"></div>
         </div>
     </div>
 </div>
