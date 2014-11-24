@@ -40,6 +40,15 @@
     color: white; 
 }
 
+.lt-ie9 .funder-one {
+    width: 20%;
+}
+
+.lt-ie9 .funder-two {
+    width: 40%;
+    margin-left: 40%;
+}
+
 .lt-ie9 select {
     padding: 10px;
     background: #2f8888;

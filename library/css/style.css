@@ -1949,7 +1949,7 @@ ul.share-links.columns {
   padding: .5em .2em;
   width: 30px;
   height: 30px;
-  line-height: 0px;
+  line-height: 0;
   text-align: center;
   background: tomato;
   border-radius: 50%; }
@@ -1980,19 +1980,29 @@ ul.share-links.columns {
 
 /* OPERA POSITIONAL FIXES FOR SLIDER + TOP MARGIN OF CONTENT */
 x:-o-prefocus, .slider {
-  height: 450px; }
+  height: 460px; }
+
+x:-o-prefocus, .home #main {
+  height: 480px; }
 
 x:-o-prefocus, .one {
-  margin-top: 10em; }
+  margin-top: -3em; }
 
 x:-o-prefocus, .two {
-  margin-top: 3.5em; }
+  margin-top: 11.5em; }
 
 x:-o-prefocus, .three {
-  margin-top: 8em; }
+  margin-top: 16em; }
 
 x:-o-prefocus, #inner-content {
   margin-top: 3em; }
+
+x:-o-prefocus, .funder-one {
+  width: 20%; }
+
+x:-o-prefocus, .funder-two {
+  width: 40%;
+  margin-left: 40%; }
 
 x:-o-prefocus, .has-dropdown:hover > .dropdown {
   overflow: visible !important; }
