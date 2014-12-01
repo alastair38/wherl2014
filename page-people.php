@@ -20,7 +20,7 @@ Template Name: Main People Landing Page
 	</header> <!-- end article header -->
 					
 					  
-                    					<?php the_excerpt(); ?>
+                    					
                     					
                     								    								    					
 					    <?php endwhile; else : ?>
@@ -53,8 +53,14 @@ Template Name: Main People Landing Page
    endif;
     
 wp_reset_query(); 
+?>
+<div class="large-4 medium-6 small-12 columns end">
+    <div class="people">
+    <h5>Project Adviser</h5>
+    <?php the_content();?></div>
+</div>
 
-?>           
+           
    <header class="article-header">
 		<h1 class="large-12 columns page-title"><?php echo get_the_title() . " - Project Partners"; ?></h1>
 	</header>
@@ -81,7 +87,10 @@ wp_reset_query();
       endwhile;
 
    endif;
-?>           
+?>
+
+
+           
   </div> <!-- end #main -->
                       
 				</div> <!-- end #inner-content -->
