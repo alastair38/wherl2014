@@ -55,7 +55,7 @@ Template Name: Main People Landing Page
 wp_reset_query(); 
 ?>
 <div class="large-4 medium-6 small-12 columns end">
-    <div class="people">
+    <div id="project-adviser" class="people">
     <h5>Project Adviser</h5>
     <?php the_content();?></div>
 </div>

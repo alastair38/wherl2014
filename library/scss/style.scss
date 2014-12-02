@@ -70,16 +70,21 @@ you can add resource intensive styles.
 XLARGE
 */
 @media only screen and (min-width: 90.063em) {
+    
+
 
 	// styles in xlarge.scss
 	@import "xlarge";
 
 } // end of media query
 
+
 /*
 XXLARGE
 */
 @media only screen and (min-width: 120.063em) {
+    
+    
 
 	// styles in xxlarge.scss
 	@import "xxlarge";
@@ -261,7 +266,7 @@ overflow: hidden;
  
 .slider{
 	width: 100%;
-	height: 300px;
+	height: 400px;
 	overflow: hidden;
 	position: relative;	
 }
@@ -511,8 +516,8 @@ nav.wp-prev-next ul {
 }
 
 .people-logo img {
-    width: 40%; 
-    margin-left:30%;
+    width: 30%; 
+    margin-left:35%;
     margin-top: 20px;
 }
 
@@ -946,11 +951,13 @@ x:-o-prefocus, .has-dropdown:hover > .dropdown {
     #inner-content {
         padding: 3em 0em;
     }
-    #main-project a .project, #main-people a .people {
+    #main-project a .project, #main-people a .people,
+    #project-adviser
+    {
         margin: 0 0 1em 0;
     }
     #main-people .large-4, #main-project .large-4, #people .large-9 {
-        padding: 0em;
+        padding: 0;
     }
     .home-links {
         margin-bottom: 1em;
@@ -999,6 +1006,21 @@ Want to get fancy for no good reason? Knock yourself out.
   // iPhone 5 or iPod Touch 5th generation styles (you can include your own file if you want)
   
 }
+
+@media screen and (min-width: 1367px) and (max-width: 1920px) {
+    .one img {
+        margin: 3% 30%;
+    }
+    
+    .blog-thumbnail img {
+        height: 450px;
+    }
+    
+    .people-logo img {
+        margin-top: 10px;
+    }
+}
+
 
 /*
 PRINT STYLESHEET
