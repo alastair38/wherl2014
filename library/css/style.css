@@ -1678,6 +1678,11 @@ nav.wp-prev-next ul {
   .people-details h3 {
     font-size: 1.25em; }
 
+.people-ac-logo img {
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 20px; }
+
 .people-logo img {
   width: 30%;
   margin-left: 35%;
