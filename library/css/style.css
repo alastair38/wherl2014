@@ -1664,7 +1664,8 @@ nav.wp-prev-next ul {
 
 /* PEOPLE PAGES */
 .people {
-  background: rgba(255, 99, 71, 0.75); }
+  background: rgba(255, 99, 71, 0.75);
+  position: relative; }
 
 .large-4 .people,
 .large-4 .project {
@@ -1679,14 +1680,16 @@ nav.wp-prev-next ul {
     font-size: 1.25em; }
 
 .people-ac-logo img {
-  width: 50%;
-  margin-left: 25%;
-  margin-top: 20px; }
+  position: absolute;
+  bottom: 2%;
+  left: 10%;
+  width: 80%; }
 
 .people-logo img {
-  width: 30%;
-  margin-left: 35%;
-  margin-top: 20px; }
+  position: absolute;
+  bottom: 2%;
+  right: 25%;
+  width: 50%; }
 
 #people .archive-thumbnail {
   margin-bottom: 1em; }
@@ -2061,6 +2064,14 @@ x:-o-prefocus, .has-dropdown:hover > .dropdown {
   #mc4wp-form-1 {
     padding: 1em; }
 
+  .people-ac-logo img {
+    left: 35%;
+    width: 30%; }
+
+  .people-logo img {
+    left: 35%;
+    width: 30%; }
+
   x:-o-prefocus, .one {
     display: none; }
 
@@ -2071,6 +2082,10 @@ x:-o-prefocus, .has-dropdown:hover > .dropdown {
 
   x:-o-prefocus, .three {
     display: none; } }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .people-ac-logo img {
+    left: 25%;
+    width: 50%; } }
 /*
 RETINA (2x RESOLUTION DEVICES)
 This applies to the retina iPhone (4s) and iPad (2,3) along with
