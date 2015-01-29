@@ -79,7 +79,7 @@ wp_reset_query();
           <div class="large-4 medium-6 small-12 columns end">
           <a href="<?php the_permalink();?>"><div class="people">
               <h5><?php the_title(); ?></h5>
-         <div class="people-logo"><?php the_post_thumbnail('full'); ?></div>
+         <div class="people-logo post-<?php the_id(); ?>"><?php the_post_thumbnail('full'); ?></div>
               </div></a>
          </div>      
       

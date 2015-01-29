@@ -408,6 +408,13 @@ img.team-logo {
     left: 0;
 }
 
+.postid-54 img.team-logo {
+    width: 20%;
+    position:absolute;
+    top: 0;
+    left: 0;
+}
+
 #team-excerpt {
     padding-top: 3em;
 }
@@ -1043,6 +1050,11 @@ Want to get fancy for no good reason? Knock yourself out.
     
     .people-logo img {
         margin-top: 10px;
+    }
+    .people .post-54 img,
+    .people .post-51 img {
+        width: 50%;
+        left: 25%;
     }
 }
 

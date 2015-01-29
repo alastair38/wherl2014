@@ -1596,6 +1596,12 @@ img.team-logo {
   top: 0;
   left: 0; }
 
+.postid-54 img.team-logo {
+  width: 20%;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
 #team-excerpt {
   padding-top: 3em; }
 
@@ -2145,7 +2151,12 @@ Want to get fancy for no good reason? Knock yourself out.
     height: 450px; }
 
   .people-logo img {
-    margin-top: 10px; } }
+    margin-top: 10px; }
+
+  .people .post-54 img,
+  .people .post-51 img {
+    width: 50%;
+    left: 25%; } }
 /*
 PRINT STYLESHEET
 Feel free to customize this. Remember to add things that won't make
