@@ -606,6 +606,7 @@ if(function_exists("register_field_group"))
 				'label' => 'Event Start',
 				'name' => 'event_start',
 				'type' => 'date_picker',
+                'required' => 1,
 				'date_format' => 'yymmdd',
 				'display_format' => 'dd/mm/yy',
 				'first_day' => 1,

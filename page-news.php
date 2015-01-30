@@ -31,7 +31,7 @@ Template Name: News
     $args = array(
         'post_type' => 'news',
         'orderby'    => 'date',
-	    'order'      => 'ASC',
+	    'order'      => 'DESC',
         'posts_per_page' => 9,
         'paged' => $paged
     );

@@ -34,7 +34,9 @@ echo ' - ' . $date->format('d F Y'); ?>
                                     <?php endif; ?> 
                             <?php if( get_field('event_time') ){
         echo '<p><i class="fi-clock" title="Event Time"></i> ' . get_field('event_time') . '</p>';
-} 
+} else {
+    echo '<p></p>';
+}
 ?>
                              <?php the_content();?>
                              
@@ -91,11 +93,7 @@ echo ' - ' . $date->format('d F Y'); ?>
                                 <div class="web"><i class="fi-web"></i><a href="<?php the_field('event_website'); ?>" target="_blank">Website</a></div>
                             <?php endif; ?>
                             
-                            
-                             
-                            </div>
-                            
-                            <div id="map" class="large-12 columns">
+                            <div class="map">
                             
                            
                             <?php 
@@ -111,20 +109,12 @@ $location = get_field('event_map');
                               
                                                       
                              </div>   
-                          
-                           
-                            
+
+                            </div>
+
                         </div>
-   
-                   
- 
 
-
-
-
-	
-                        </div><!-- end #main -->
-    
+                    </div><!-- end #main -->
 				    
 				</div> <!-- end #inner-content -->
     

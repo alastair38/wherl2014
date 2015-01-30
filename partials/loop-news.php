@@ -1,7 +1,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
    
    <div class="date">
-<?php the_time('F j Y') ?>
+<?php the_time('F j, Y') ?>
     </div>	
 	
 	<div class="blog-article large-12 columns">	
