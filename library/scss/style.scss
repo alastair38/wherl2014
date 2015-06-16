@@ -1023,6 +1023,10 @@ x:-o-prefocus, .two {
 x:-o-prefocus, .three {
     display: none;
 }
+.postid-52 img.team-logo,
+.postid-195 img.team-logo{
+    width: 25px;
+}
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -1030,7 +1034,10 @@ x:-o-prefocus, .three {
     left: 25%;
     width: 50%
     }
-
+    .postid-52 img.team-logo,
+.postid-195 img.team-logo{
+    width: 60px;
+}
 }
 
 /*
@@ -1077,6 +1084,11 @@ Want to get fancy for no good reason? Knock yourself out.
     .people .post-51 img {
         width: 36%;
         left: 32%;
+    }
+    .people .post-52 img,
+    .people .post-195 img{
+        width: 30%;
+        left: 35%;
     }
 }
 
