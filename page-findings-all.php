@@ -16,7 +16,10 @@ $args = array();
 $args['form'] = array('action' => '',
                                 'method' => 'GET');
 $args['wp_query'] = array('post_type' => array('finding'),
-                          'posts_per_page' => 10
+                          'posts_per_page' => 10,
+                          'orderby'    => 'meta_value_num',
+                          'order'      => 'DESC',
+                          'meta_key'  => 'findings_date'
                           
                           );
 $args['fields'][] = array(

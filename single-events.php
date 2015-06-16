@@ -42,27 +42,27 @@ echo ' - ' . $date->format('d F Y'); ?>
                              
                              <ul class="findings-authors"> 
 							 <?php if( get_field('file_upload') ): ?>
-                             <h5><strong>Download Accompanying Files</strong></h5>
+                             <h5><strong>Accompanying Files</strong></h5>
                              <li class="findings-project"><a href="<?php the_field( 'file_upload' ); ?>" target="_blank" title="Download <?php the_field( 'file_upload' ); ?>">
-										<i class="fi-download"></i>
+										Click to download event details <i class="fi-download"></i>
 									</a></li>
                             <?php endif; ?>
                             
                             <?php if( get_field('file_uploadb') ): ?>
                              <li class="findings-project"><a href="<?php the_field( 'file_uploadb' ); ?>" target="_blank" title="Download <?php the_field( 'file_upload' ); ?>">
-										<i class="fi-download"></i>
+										Click to download event details <i class="fi-download"></i>
 									</a></li>
                             <?php endif; ?>
                             
                             <?php if( get_field('file_uploadc') ): ?>
                              <li class="findings-project"><a href="<?php the_field( 'file_uploadc' ); ?>" target="_blank" title="Download <?php the_field( 'file_upload' ); ?>">
-										<i class="fi-download"></i>
+										Click to download event details <i class="fi-download"></i>
 									</a></li>
                             <?php endif; ?>
                             
                             <?php if( get_field('external_link') ): ?>
                              <li class="findings-project"><a href="<?php the_field( 'external_link' ); ?>" target="_blank" title="This will take you to an external website">
-										<i class="fi-info"> More Information</i>
+										Follow this link for more information <i class="fi-info"></i>
 									</a></li>
                             <?php endif; ?>
 							
@@ -75,10 +75,7 @@ echo ' - ' . $date->format('d F Y'); ?>
                                 </article>
                             </div>
                             <div id="contact" class="large-3 small-12 columns clearfix">
-<div class="contact-list">Contact
-                          <?php if( get_field('contact_name') ): ?>
-                                    <?php the_field('contact_name'); ?>
-                                    <?php endif; ?> 
+<div class="contact-list">Map + Details
 </div>                       
                             <?php if( get_field('event_email') ): ?>
                                 <div class="email"><i class="fi-mail"></i><a href="mailto:<?php the_field('event_email'); ?>" target="_blank">Email</a></div>

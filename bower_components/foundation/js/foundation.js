@@ -4859,12 +4859,12 @@
           self.S('.has-dropdown', topbar).removeClass('not-click');
         }
 
-        // Pad body when sticky (scrolled) or fixed.
+        /* Pad body when sticky (scrolled) or fixed.
         self.add_custom_rule('.f-topbar-fixed { padding-top: ' + topbar.data('height') + 'px }');
 
         if (topbarContainer.hasClass('fixed')) {
           self.S('body').addClass('f-topbar-fixed');
-        }
+        } */
       });
 
     },

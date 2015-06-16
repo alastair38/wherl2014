@@ -1095,6 +1095,39 @@ if(function_exists("register_field_group"))
 		),
 		'menu_order' => 0,
 	));
+    register_field_group(array (
+		'id' => 'acf_findings-date',
+		'title' => 'Findings Date',
+		'fields' => array (
+			array (
+				'key' => 'field_5580567789f6a',
+				'label' => 'Add a date',
+				'name' => 'findings_date',
+				'type' => 'date_picker',
+				'date_format' => 'yymmdd',
+				'display_format' => 'dd/mm/yy',
+				'first_day' => 1,
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'finding',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'side',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
 }
 	
 ?>

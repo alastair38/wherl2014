@@ -112,7 +112,9 @@ h1, h2, h3, h4, h5, h6, * {
 /* OVERIDE LINK HOVER FOR MAIN CONTENT SECTION*/
 
 #content a:hover {
-    background: #f3f3f3;
+    background: transparent;
+    color: #000;
+    text-decoration: underline;
 }
 
 /* CHANGE TOP-BAR + MAIN-MENU BACKGROUND */
@@ -166,7 +168,7 @@ h1, h2, h3, h4, h5, h6, * {
 }
 
 #inner-content {
-    padding: 3em;
+    padding: 4em 3em;
 }
     
 .home #container {
@@ -415,6 +417,17 @@ img.team-logo {
     left: 0;
 }
 
+.postid-52 img.team-logo,
+.postid-195 img.team-logo{
+    width: 100px;
+}
+
+.people-ac-logo.post-52 img,
+.people-ac-logo.post-195 img{
+    width: 40%;
+    left: 30%;
+}
+
 #team-excerpt {
     padding-top: 3em;
 }
@@ -426,13 +439,19 @@ img.team-logo {
 }
 
 .findings-authors {
-    margin: 1em 0em 1em 0em;
-     line-height: 1em;
+    margin: 1.5em 0em 1.5em 0em;
+    line-height: 1em;
+    h5 {
+        text-decoration: underline;
+        text-transform: uppercase;
+    }
     & li {
     list-style-type: none;
     display: inline;
     margin-right: 2px;
-    padding: 2px;
+    padding: 2px 0;
+    font-size: 1.25em;
+    font-weight: bold;
     & a {
         color: $theme-color;
     }
@@ -440,9 +459,9 @@ img.team-logo {
 }
 
 li.findings-type {
-    background: $text-color;
-    color: white;
+    color: $text-color;;
     line-height: 2.5em;
+    text-decoration: underline;
 }
 
 li.findings-project {
