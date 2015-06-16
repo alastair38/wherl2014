@@ -4,7 +4,11 @@
   
     <div class="columns">  
 
+
   <ul class="findings-authors">
+      <?php if( get_field('file_upload') ): ?>
+
+                            <?php endif; ?>
          <?php $types = get_field('finding_type' ); 
                                  if( $types ): ?>
 							
@@ -36,8 +40,15 @@
 						<?php endif; ?>
             
   </ul>
+
     
     <h6><?php echo get_the_title( $finding->ID ); ?></h6>
+    <?php if( get_field('findings_date') ): ?>
+                            <p><?php $date = DateTime::createFromFormat('Ymd', get_field('findings_date'));
+echo '<em>Posted - ' . $date->format('d F Y') . '</em>'; ?></p>
+                             <?php endif; ?>
+
+    <?php the_content($finding->ID);?>
                     
       
                              
@@ -69,25 +80,25 @@
                  <ul class="findings-authors"> 
 							<?php if( get_field('file_upload') ): ?>
                              <li class="findings-project"><a href="<?php the_field( 'file_upload' ); ?>" target="_blank" title="Download <?php the_field( 'file_upload' ); ?>">
-										<i class="fi-download"></i>
+										Click to download findings <i class="fi-download"></i>
 									</a></li>
                             <?php endif; ?>
                             
                             <?php if( get_field('file_uploadb') ): ?>
                              <li class="findings-project"><a href="<?php the_field( 'file_uploadb' ); ?>" target="_blank" title="Download <?php the_field( 'file_upload' ); ?>">
-										<i class="fi-download"></i>
+										Click to download findings <i class="fi-download"></i>
 									</a></li>
                             <?php endif; ?>
                             
                             <?php if( get_field('file_uploadc') ): ?>
                              <li class="findings-project"><a href="<?php the_field( 'file_uploadc' ); ?>" target="_blank" title="Download <?php the_field( 'file_upload' ); ?>">
-										<i class="fi-download"></i>
+										Click to download findings <i class="fi-download"></i>
 									</a></li>
                             <?php endif; ?>
                             
                             <?php if( get_field('external_link') ): ?>
                              <li class="findings-project"><a href="<?php the_field( 'external_link' ); ?>" target="_blank" title="This will take you to an external website">
-										<i class="fi-info"> More Information</i>
+										View More Information <i class="fi-info"></i>
 									</a></li>
                             <?php endif; ?>
 									

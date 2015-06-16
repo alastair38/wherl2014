@@ -1360,7 +1360,9 @@ h1, h2, h3, h4, h5, h6, * {
 
 /* OVERIDE LINK HOVER FOR MAIN CONTENT SECTION*/
 #content a:hover {
-  background: #f3f3f3; }
+  background: transparent;
+  color: #000;
+  text-decoration: underline; }
 
 /* CHANGE TOP-BAR + MAIN-MENU BACKGROUND */
 .top-bar,
@@ -1402,7 +1404,7 @@ h1, h2, h3, h4, h5, h6, * {
   padding: 0px 5px 5px 0px; }
 
 #inner-content {
-  padding: 3em; }
+  padding: 4em 3em; }
 
 .home #container {
   margin-top: 0;
@@ -1602,6 +1604,15 @@ img.team-logo {
   top: 0;
   left: 0; }
 
+.postid-52 img.team-logo,
+.postid-195 img.team-logo {
+  width: 100px; }
+
+.people-ac-logo.post-52 img,
+.people-ac-logo.post-195 img {
+  width: 40%;
+  left: 30%; }
+
 #team-excerpt {
   padding-top: 3em; }
 
@@ -1610,20 +1621,25 @@ img.team-logo {
   background: rgba(230, 212, 61, 0.75); }
 
 .findings-authors {
-  margin: 1em 0em 1em 0em;
+  margin: 1.5em 0em 1.5em 0em;
   line-height: 1em; }
+  .findings-authors h5 {
+    text-decoration: underline;
+    text-transform: uppercase; }
   .findings-authors li {
     list-style-type: none;
     display: inline;
     margin-right: 2px;
-    padding: 2px; }
+    padding: 2px 0;
+    font-size: 1.25em;
+    font-weight: bold; }
     .findings-authors li a {
       color: #2f8888; }
 
 li.findings-type {
-  background: #666;
-  color: white;
-  line-height: 2.5em; }
+  color: #666;
+  line-height: 2.5em;
+  text-decoration: underline; }
 
 li.findings-project a {
   color: #2f8888; }
