@@ -1604,14 +1604,13 @@ img.team-logo {
   top: 0;
   left: 0; }
 
-.postid-52 img.team-logo,
-.postid-195 img.team-logo {
+.postid-53 img.team-logo {
   width: 100px; }
 
 .people-ac-logo.post-52 img,
 .people-ac-logo.post-195 img {
-  width: 40%;
-  left: 30%; }
+  width: 50%;
+  left: 25%; }
 
 #team-excerpt {
   padding-top: 3em; }
@@ -2105,16 +2104,14 @@ x:-o-prefocus, .has-dropdown:hover > .dropdown {
   x:-o-prefocus, .three {
     display: none; }
 
-  .postid-52 img.team-logo,
-  .postid-195 img.team-logo {
+  .postid-52 img.team-logo {
     width: 25px; } }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .people-ac-logo img {
     left: 25%;
     width: 50%; }
 
-  .postid-52 img.team-logo,
-  .postid-195 img.team-logo {
+  .postid-52 img.team-logo {
     width: 60px; } }
 /*
 RETINA (2x RESOLUTION DEVICES)
@@ -2186,9 +2183,9 @@ Want to get fancy for no good reason? Knock yourself out.
     left: 32%; }
 
   .people .post-52 img,
-  .people .post-195 img {
-    width: 30%;
-    left: 35%; } }
+  .people .post-53 img {
+    width: 40%;
+    left: 30%; } }
 /*
 PRINT STYLESHEET
 Feel free to customize this. Remember to add things that won't make
