@@ -1709,8 +1709,8 @@ nav.wp-prev-next ul {
 
 .people-ac-logo.post-52 img,
 .people-ac-logo.post-53 img {
-  width: 50%;
-  left: 25%; }
+  width: 50% !important;
+  left: 25% !important; }
 
 #people .archive-thumbnail {
   margin-bottom: 1em; }
