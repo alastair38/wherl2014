@@ -1699,7 +1699,7 @@ nav.wp-prev-next ul {
   position: absolute;
   bottom: 2%;
   left: 10%;
-  width: 80%; }
+  max-width: 80%; }
 
 .people-logo img {
   position: absolute;
