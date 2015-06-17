@@ -401,7 +401,7 @@ ul.team-projects {
     padding-bottom: 2em;
 }
 
-/* SINGLE TEAM */
+/* SINGLE TEAM
 
 img.team-logo {
     width: 12%; 
@@ -420,6 +420,7 @@ img.team-logo {
 .postid-53 img.team-logo {
     width: 100px;
 }
+*/
 
 
 #team-excerpt {
@@ -550,6 +551,10 @@ nav.wp-prev-next ul {
     width: 50%
 }
 
+img.team-logo.wp-post-image {
+    width: 30%;
+    margin-left: 35%;
+}
 
 .people-ac-logo.post-52 img,
 .post-53 img{
@@ -1024,12 +1029,15 @@ x:-o-prefocus, .two {
 x:-o-prefocus, .three {
     display: none;
 }
+
+/*
 .postid-52 img.team-logo {
     width: 25px;
 }
 .postid-53 img.team-logo {
     width: 35px;
 }
+*/
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -1037,9 +1045,13 @@ x:-o-prefocus, .three {
     left: 25%;
     width: 50%
     }
+
+/*
+
     .postid-52 img.team-logo {
     width: 60px;
 }
+*/
 }
 
 /*
