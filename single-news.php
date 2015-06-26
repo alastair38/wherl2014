@@ -18,28 +18,28 @@
 				<h1 class="event-title"><?php the_title(); ?></h1>
 				<?php the_content();?>
 				
-				<ul class="findings-authors"> 
+				<ul class="findings-downloads">
 							<?php if( get_field('file_upload') ): ?>
                             <h5><strong>Accompanying Files</strong></h5>
-                             <li class="findings-project"><a href="<?php the_field( 'file_upload' ); ?>" target="_blank" title="Download <?php the_field( 'file_upload' ); ?>">
+                             <li><a href="<?php the_field( 'file_upload' ); ?>" target="_blank" title="Download <?php the_field( 'file_upload' ); ?>">
 										Click to download more information <i class="fi-download"></i>
 									</a></li>
                             <?php endif; ?>
                             
                             <?php if( get_field('file_uploadb') ): ?>
-                             <li class="findings-project"><a href="<?php the_field( 'file_uploadb' ); ?>" target="_blank" title="Download <?php the_field( 'file_upload' ); ?>">
+                             <li><a href="<?php the_field( 'file_uploadb' ); ?>" target="_blank" title="Download <?php the_field( 'file_upload' ); ?>">
 										Click to download more information <i class="fi-download"></i>
 									</a></li>
                             <?php endif; ?>
                             
                             <?php if( get_field('file_uploadc') ): ?>
-                             <li class="findings-project"><a href="<?php the_field( 'file_uploadc' ); ?>" target="_blank" title="Download <?php the_field( 'file_upload' ); ?>">
+                             <li><a href="<?php the_field( 'file_uploadc' ); ?>" target="_blank" title="Download <?php the_field( 'file_upload' ); ?>">
 									Click to download more information <i class="fi-download"></i>
 									</a></li>
                             <?php endif; ?>
                             
                             <?php if( get_field('external_link') ): ?>
-                             <li class="findings-project"><a href="<?php the_field( 'external_link' ); ?>" target="_blank" title="This will take you to an external website">
+                             <li><a href="<?php the_field( 'external_link' ); ?>" target="_blank" title="This will take you to an external website">
 										Follow this link for more information <i class="fi-info"></i>
 									</a></li>
                             <?php endif; ?>
