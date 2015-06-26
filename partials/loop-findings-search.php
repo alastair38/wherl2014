@@ -27,13 +27,15 @@
                                  if( $authors ): ?>
 							
 							<span>submitted by </span> 
+
 							<?php foreach( $authors as $author): ?>
 								
 									<li><a href="<?php echo get_permalink( $author->ID ); ?>" title="View <?php echo get_the_title( $author->ID ); ?>'s Profile">
 										<?php echo get_the_title( $author->ID ); ?>
 									</a></li>
 								
-							<?php endforeach; ?>
+							<?php endforeach;
+ ?>
 							
                                
 				
@@ -77,27 +79,27 @@ echo '<em>Posted - ' . $date->format('d F Y') . '</em>'; ?></p>
 							
                                      </ul>
                                      
-                 <ul class="findings-authors"> 
+                 <ul class="findings-downloads">
 							<?php if( get_field('file_upload') ): ?>
-                             <li class="findings-project"><a href="<?php the_field( 'file_upload' ); ?>" target="_blank" title="Download <?php the_field( 'file_upload' ); ?>">
+                             <li><a href="<?php the_field( 'file_upload' ); ?>" target="_blank" title="Download <?php the_field( 'file_upload' ); ?>">
 										Click to download findings <i class="fi-download"></i>
 									</a></li>
                             <?php endif; ?>
                             
                             <?php if( get_field('file_uploadb') ): ?>
-                             <li class="findings-project"><a href="<?php the_field( 'file_uploadb' ); ?>" target="_blank" title="Download <?php the_field( 'file_upload' ); ?>">
+                             <li><a href="<?php the_field( 'file_uploadb' ); ?>" target="_blank" title="Download <?php the_field( 'file_upload' ); ?>">
 										Click to download findings <i class="fi-download"></i>
 									</a></li>
                             <?php endif; ?>
                             
                             <?php if( get_field('file_uploadc') ): ?>
-                             <li class="findings-project"><a href="<?php the_field( 'file_uploadc' ); ?>" target="_blank" title="Download <?php the_field( 'file_upload' ); ?>">
+                             <li><a href="<?php the_field( 'file_uploadc' ); ?>" target="_blank" title="Download <?php the_field( 'file_upload' ); ?>">
 										Click to download findings <i class="fi-download"></i>
 									</a></li>
                             <?php endif; ?>
                             
                             <?php if( get_field('external_link') ): ?>
-                             <li class="findings-project"><a href="<?php the_field( 'external_link' ); ?>" target="_blank" title="This will take you to an external website">
+                             <li><a href="<?php the_field( 'external_link' ); ?>" target="_blank" title="This will take you to an external website">
 										View More Information <i class="fi-info"></i>
 									</a></li>
                             <?php endif; ?>

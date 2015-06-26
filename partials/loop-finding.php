@@ -83,25 +83,25 @@ $postid = get_the_ID();
 						<?php endif; ?>
                            
                            
-                           <ul class="findings-authors"> 
+                           <ul class="findings-downloads">
 							<?php if( get_field('file_upload', $finding->ID) ): ?>
-                             <li class="findings-project"><a href="<?php the_field( 'file_upload', $finding->ID ); ?>" target="_blank" title="Download <?php the_field( 'file_upload' ); ?>">
-										<i class="fi-download"></i>
+                             <li><a href="<?php the_field( 'file_upload', $finding->ID ); ?>" target="_blank" title="Download <?php the_field( 'file_upload' ); ?>">
+									Click to download findings	<i class="fi-download"></i>
 									</a></li>
                             <?php endif; ?>
                             <?php if( get_field('file_uploadb', $finding->ID) ): ?>
-                             <li class="findings-project"><a href="<?php the_field( 'file_uploadb', $finding->ID ); ?>" target="_blank" title="Download <?php the_field( 'file_upload' ); ?>">
-										<i class="fi-download"></i>
+                             <li><a href="<?php the_field( 'file_uploadb', $finding->ID ); ?>" target="_blank" title="Download <?php the_field( 'file_upload' ); ?>">
+									Click to download findings	<i class="fi-download"></i>
 									</a></li>
                             <?php endif; ?>
                             <?php if( get_field('file_uploadc', $finding->ID) ): ?>
-                             <li class="findings-project"><a href="<?php the_field( 'file_uploadc', $finding->ID ); ?>" target="_blank" title="Download <?php the_field( 'file_upload' ); ?>">
-										<i class="fi-download"></i>
+                             <li><a href="<?php the_field( 'file_uploadc', $finding->ID ); ?>" target="_blank" title="Download <?php the_field( 'file_upload' ); ?>">
+									Click to download findings	<i class="fi-download"></i>
 									</a></li>
                             <?php endif; ?>
                             <?php if( get_field('external_link', $finding->ID) ): ?>
-                             <li class="findings-project"><a href="<?php the_field( 'external_link', $finding->ID ); ?>" target="_blank" title="This will take you to an external website"><i class="fi-info"></i>
-										More Information
+                             <li><a href="<?php the_field( 'external_link', $finding->ID ); ?>" target="_blank" title="This will take you to an external website">
+                                 View More Information <i class="fi-info"></i>
 									</a></li>
                             <?php endif; ?>
 									

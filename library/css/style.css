@@ -927,6 +927,30 @@ NAVIGATION STYLES
   .off-canvas-list ul .dropdown {
     margin-left: 20px; }
 
+.findings-authors li:after {
+  content: ' -'; }
+
+li:last-child:after {
+  content: ''; }
+
+li.findings-type:after {
+  content: ''; }
+
+ul.findings-downloads {
+  list-style-type: none;
+  margin-left: 0;
+  font-size: 1.25em; }
+  ul.findings-downloads li {
+    background: #414141;
+    text-align: center;
+    margin-bottom: 1em; }
+    ul.findings-downloads li a {
+      color: white !important;
+      display: block;
+      transition: 350ms; }
+      ul.findings-downloads li a:hover, ul.findings-downloads li a:focus {
+        background: #666 !important; }
+
 /*********************
 POSTS & CONTENT STYLES
 *********************/

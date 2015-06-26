@@ -160,6 +160,40 @@ NAVIGATION STYLES
 	}
 }
 
+
+.findings-authors li:after
+{
+  content: ' -';
+}
+li:last-child:after
+{
+  content: '';
+}
+
+li.findings-type:after {
+    content: '';
+}
+
+ul.findings-downloads {
+    list-style-type: none;
+    margin-left: 0;
+    font-size: 1.25em;
+    li {
+    background: #414141;
+    text-align: center;
+    margin-bottom: 1em;
+    a {
+    color: white !important;
+    display: block;
+    transition: 350ms;
+    &:hover, &:focus {
+        background: #666 !important;
+    }
+    }
+        }
+}
+
+
 /*********************
 POSTS & CONTENT STYLES
 *********************/
